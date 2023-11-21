@@ -1,0 +1,110 @@
+/* Global Styles */
+.button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.button.selected {
+  border-color: blue;
+  background-color: #e0f0ff;
+}
+
+/* TextInput Component */
+.textInput {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* FontSelector Component */
+.fontSelector {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  gap: 10px;
+}
+
+.fontBox {
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.fontBox.selected {
+  border-color: blue;
+  background-color: #e0f0ff;
+}
+
+/* ColorSelector Component */
+.colorSelector {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+  gap: 10px;
+}
+
+.colorBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.colorBox.selected {
+  border-color: black;
+}
+
+/* TubeColorSelector Component */
+.tubeColorSelector {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+/* PresetSizeSelector Component */
+.presetSizeSelector {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+/* CustomSizeSelector Component */
+.customSizeSelector {
+  padding: 10px;
+}
+
+.customSizeSelector input[type="range"] {
+  width: 100%;
+  margin: 5px 0;
+}
+
+/* BackingTypeSelector Component */
+.backingTypeSelector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+/* LocationSelector Component */
+.locationSelector {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
