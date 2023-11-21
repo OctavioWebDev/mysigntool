@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextInput from './components/TextInput';
+import TextDisplay from './components/TextDisplay';
 import FontSelector from './components/FontSelector';
 import ColorSelector from './components/ColorSelector';
 import TubeColorSelector from './components/TubeColorSelector';
@@ -10,9 +11,8 @@ import LocationSelector from './components/LocationSelector';
 import './neonSignToolStyles.css';
 
 function NeonSignBuilderTool() {
-  const handleTextChange = (text) => {
-    console.log("Text changed to: ", text);
-};
+const [textInput, setTextInput] = useState('');
+const handleTextInputChange = (text) => setTextInput(text);
   const fonts = ["Arial", "Verdana", "Helvetica", "Times New Roman", "Courier New", /* more fonts */ ];
 
   const handleFontSelect = (font) => {
@@ -42,7 +42,8 @@ const handleLocationSelect = (location) => {
 
   return (
     <div className="neonSignBuilderTool">
-      <TextInput placeholder="Enter your text here" onTextChange={handleTextChange} />
+      <TextDisplay text={textInput} />
+      <TextInput placeholder="Enter your text here" onTextChange={handleTextInputChange} />
       <FontSelector fonts={fonts} onSelectFont={handleFontSelect} />
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
