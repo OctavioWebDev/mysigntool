@@ -43,7 +43,7 @@ const handleLocationSelect = (location) => {
   return (
     <div className="neonSignBuilderTool">
       <TextDisplay text={textInput} />
-      <TextInput placeholder="Enter your text here" onTextChange={handleTextInputChange} />
+      <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
       <FontSelector fonts={fonts} onSelectFont={handleFontSelect} />
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />

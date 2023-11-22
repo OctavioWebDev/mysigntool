@@ -1,4 +1,7 @@
 /* Global Styles */
+body {
+  background-color: aqua;
+}
 .button {
   padding: 10px 20px;
   cursor: pointer;
@@ -14,6 +17,10 @@
 }
 
 .textDisplay {
+  display: inline-block;
+  font-size: 58px;
+  height: 300px;
+  width: 700px;
   margin: 10px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -24,12 +31,14 @@
 
 /* TextInput Component */
 .textInput {
+  display: inline-block;
   padding: 10px;
   margin: 5px;
+  height: 50px;
+  width: 700px;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
-  width: 100%;
 }
 
 /* FontSelector Component */
@@ -89,7 +98,7 @@
 .presetSizeSelector {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* CustomSizeSelector Component */
