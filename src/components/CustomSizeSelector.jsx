@@ -3,10 +3,19 @@ import React, { useState } from 'react';
 const CustomSizeSelector = ({ onSizeChange }) => {
     const [size, setSize] = useState({ width: 10, height: 3 });
 
-    const handleSizeChange = (width, height) => {
-        setSize({ width, height });
+    const handleSizeChange = (newWidth) => {
+        // Every 3 units of width equals 1 unit of height
+        const newHeight = 3 + Math.floor((newWidth - 10) / 3);
+
+        const newSize = {
+            width: newWidth,
+            height: Math.min(Math.max(newHeight, 3), 37) // Ensuring height stays within bounds
+        };
+
+        setSize(newSize);
+
         if (onSizeChange) {
-            onSizeChange({ width, height });
+            onSizeChange(newSize);
         }
     };
 
@@ -17,20 +26,14 @@ const CustomSizeSelector = ({ onSizeChange }) => {
                 min="10"
                 max="118"
                 value={size.width}
-                onChange={(e) => handleSizeChange(e.target.value, size.height)}
-            />
-            <input
-                type="range"
-                min="3"
-                max="37"
-                value={size.height}
-                onChange={(e) => handleSizeChange(size.width, e.target.value)}
+                onChange={(e) => handleSizeChange(parseInt(e.target.value))}
             />
             <div>
-                Custom Size: {size.width} x {size.height}
+                Size: {size.width} x {size.height}
             </div>
         </div>
     );
 };
 
 export default CustomSizeSelector;
+
