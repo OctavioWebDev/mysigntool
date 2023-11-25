@@ -40,6 +40,8 @@ const handleLocationSelect = (location) => {
   console.log("Selected location: ", location);
 };
 
+
+
   return (
     <div className="neonSignBuilderTool">
       <TextDisplay text={textInput} />
