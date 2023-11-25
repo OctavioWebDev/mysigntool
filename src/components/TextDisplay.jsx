@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../neonSignToolStyles.css';
 
-const TextDisplay = ({ text }) => {
+const TextDisplay = ({ text, font }) => {
     const [isGlowActive, setIsGlowActive] = useState(false);
 
     const handleGlowToggle = () => {
@@ -9,6 +9,7 @@ const TextDisplay = ({ text }) => {
     };
 
     const textDisplayStyle = {
+        fontFamily: font,
         textShadow: isGlowActive ? "0 0 10px #2196f3, 0 0 20px #2196f3, 0 0 30px #2196f3" : "none"
     };
 

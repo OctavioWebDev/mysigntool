@@ -12,12 +12,16 @@ import './neonSignToolStyles.css';
 
 function NeonSignBuilderTool() {
 const [textInput, setTextInput] = useState('');
+const [selectedFont, setSelectedFont] = useState('Arial');
+
 const handleTextInputChange = (text) => setTextInput(text);
   const fonts = ["Arial", "Verdana", "Helvetica", "Times New Roman", "Courier New", /* more fonts */ ];
 
-  const handleFontSelect = (font) => {
+  const handleFontSelection = (font) => {
+    setSelectedFont(font);
     console.log("Selected font: ", font);
-};
+  };
+  
 const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", /* more colors */];
 
 const handleColorSelect = (color) => {
@@ -40,13 +44,11 @@ const handleLocationSelect = (location) => {
   console.log("Selected location: ", location);
 };
 
-
-
   return (
     <div className="neonSignBuilderTool">
-      <TextDisplay text={textInput} />
+      <TextDisplay font={selectedFont} text={textInput} />
       <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
-      <FontSelector fonts={fonts} onSelectFont={handleFontSelect} />
+      <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
       <PresetSizeSelector onSelectSize={handlePresetSizeSelect}/>
