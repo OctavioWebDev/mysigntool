@@ -205,10 +205,16 @@ input:checked + .slider:before {
 }
 
 /* LocationSelector Component */
-.locationSelector {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+.locationSelector button {
+  width: 250px; /* Fixed width */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  margin: 0 5px; /* Space between buttons */
+  text-align: center; /* Center the text */
+  border: 1px solid #6F5AA5; /* Border styling */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #6F5AA5; /* Background color */
+  cursor: pointer; /* Cursor style */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 
