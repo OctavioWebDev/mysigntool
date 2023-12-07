@@ -216,6 +216,20 @@ input:checked + .slider:before {
   padding: 10px;
 }
 
+.customSizeSelectorBox {
+  display: inline-block;
+  width: 715px; /* Fixed width */
+  padding: 10px 20px; /* Vertical and horizontal padding */
+  margin: 0 5px; /* Space between buttons */
+  text-align: center; /* Center the text */
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 4px;
+  text-align: center;
+  background-color: transparent;
+  transition: all 0.3s ease;
+} 
+
 .customSizeSelector input[type="range"] {
   width: 100%;
   margin: 5px 0;

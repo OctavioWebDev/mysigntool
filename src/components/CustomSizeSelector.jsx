@@ -21,6 +21,7 @@ const CustomSizeSelector = ({ onSizeChange }) => {
 
     return (
         <div className="customSizeSelector">
+            <div className="customSizeSelectorBox">
             <input
                 type="range"
                 min="10"
@@ -32,6 +33,7 @@ const CustomSizeSelector = ({ onSizeChange }) => {
                 Size: {size.width} x {size.height}
             </div>
         </div>
+    </div>
     );
 };
 
