@@ -6,6 +6,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover; */
 }
+h1 { 
+  display: flex;
+  justify-content: left;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+
+}
 .button {
   padding: 10px 20px;
   cursor: pointer;
@@ -167,11 +178,18 @@ input:checked + .slider:before {
   border-color: black;
 }
 
+.tubeColorSelector {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  /* Add any additional styling you need for the container */
+  margin-bottom: 20px;
+}
+
 /* TubeColorSelector Component */
 .tubeColorSelector button {
-  width: 250px; /* Fixed width */
-  padding: 10px 20px; /* Vertical and horizontal padding */
-  margin: 0 5px; /* Space between buttons */
+  width: 367px; /* Fixed width */
+  padding: 20px 20px; /* Vertical and horizontal padding */
+  margin: 0 15px; /* Space between buttons */
   text-align: center; /* Center the text */
   border: 1px solid white; /* Border styling */
   border-radius: 4px; /* Rounded corners */
@@ -187,18 +205,15 @@ input:checked + .slider:before {
 
 /* PresetSizeSelector Component */
 .presetSizeSelector {
-  border-radius: 15px;
-  width: 300px; 
-  height: 40px;
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
+  justify-content: center;
 }
 
 .presetSizeSelector button {
-  width: 250px; /* Fixed width */
-  padding: 10px 20px; /* Vertical and horizontal padding */
-  margin: 0 5px; /* Space between buttons */
+  padding: 10px 30px; /* Vertical and horizontal padding */
+  margin: 0 10px; /* Space between buttons */
+  width: 600;
+  margin-bottom: 10px;
   text-align: center; /* Center the text */
   border: 1px solid white; /* Border styling */
   border-radius: 4px; /* Rounded corners */
@@ -245,7 +260,7 @@ input:checked + .slider:before {
 }
 
 .backingTypeSelector button {
-  padding: 10px 20px; /* Vertical and horizontal padding */
+  padding: 20px 20px; /* Vertical and horizontal padding */
   margin: 0 5px; /* Space between buttons */
   text-align: center; /* Center the text */
   border: 1px solid white; /* Border styling */
@@ -264,11 +279,15 @@ input:checked + .slider:before {
   border-color: #8C7BB7;
   background-color: #9C8AC8; /* Background color for selected state */
 }
-
+.locationSelector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 /* LocationSelector Component */
 .locationSelector button {
-  width: 250px; /* Fixed width */
-  padding: 10px 20px; /* Vertical and horizontal padding */
+  width: 377px; /* Fixed width */
+  padding: 20px 20px; /* Vertical and horizontal padding */
   margin: 0 5px; /* Space between buttons */
   text-align: center; /* Center the text */
   border: 1px solid white; /* Border styling */

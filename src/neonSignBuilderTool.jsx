@@ -46,14 +46,23 @@ const handleLocationSelect = (location) => {
 
   return (
     <div className="neonSignBuilderTool">
+      <h1>Build Your Neon Sign</h1>
       <TextDisplay font={selectedFont} text={textInput} />
+      <h2>Text Input</h2>
       <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
+      <h2>Font Selector</h2>
       <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
+      <h2>Color Selector</h2>
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
+      <h2>Tub Color Matching</h2>
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
+      <h2>Size Selecto</h2>
       <PresetSizeSelector onSelectSize={handlePresetSizeSelect}/>
+      <h2>Custom Size</h2>
       <CustomSizeSelector onSizeChange={handleCustomSizeChange}/>
+      <h2>Backing Type</h2>
       <BackingTypeSelector onSelectBackingType={handleBackingTypeSelect}/>
+      <h2>Locatiion</h2>
       <LocationSelector onSelectLocation={handleLocationSelect}/>
     </div>
   );
