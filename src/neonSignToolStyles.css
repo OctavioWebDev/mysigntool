@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover; */
 }
-h1 { 
+h1{
   display: flex;
   justify-content: left;
   margin-left: 10px;
@@ -14,9 +14,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-h2 {
-
-}
 .button {
   padding: 10px 20px;
   cursor: pointer;
@@ -56,8 +53,7 @@ h2 {
   display: inline-block;
   left: 10px;
   width: 60px; /* Width of the switch */
-  height: 34px; /* Height of the switch */
-  z-index: 3px;
+  height: 35px; /* Height of the switch */
 }
 
 /* Hide default HTML checkbox */

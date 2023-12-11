@@ -56,13 +56,13 @@ const handleLocationSelect = (location) => {
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
       <h2>Tub Color Matching</h2>
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
-      <h2>Size Selecto</h2>
+      <h2>Size Selector</h2>
       <PresetSizeSelector onSelectSize={handlePresetSizeSelect}/>
       <h2>Custom Size</h2>
       <CustomSizeSelector onSizeChange={handleCustomSizeChange}/>
       <h2>Backing Type</h2>
       <BackingTypeSelector onSelectBackingType={handleBackingTypeSelect}/>
-      <h2>Locatiion</h2>
+      <h2>Location</h2>
       <LocationSelector onSelectLocation={handleLocationSelect}/>
     </div>
   );
