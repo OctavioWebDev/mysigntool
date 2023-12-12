@@ -15,7 +15,7 @@ const TextDisplay = ({ text, font }) => {
 
     return (
         <div>
-            <label className="switch" style={{ position: 'relative', top: "320px", left: '20px' }}>
+            <label className="switch" style={{ position: 'relative', top: "415px", left: '20px' }}>
                 <input type="checkbox" onChange={handleGlowToggle} />
                 <span className="slider round"></span>
             </label>

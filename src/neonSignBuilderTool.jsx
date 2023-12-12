@@ -46,23 +46,86 @@ const handleLocationSelect = (location) => {
 
   return (
     <div className="neonSignBuilderTool">
-      <h1>Build Your Neon Sign</h1>
+      <h1 style={{ 
+          position: 'relative', 
+          top: "5px",   
+          left: '20px',
+          color: 'white' 
+          }}>
+        Build Your Neon Sign
+        </h1>
       <TextDisplay font={selectedFont} text={textInput} />
-      <h2>Text Input</h2>
+      <h2 style={{ 
+          position: 'relative', 
+          top: "5px", 
+          left: '20px',
+          color: 'white' 
+          }}>
+        Text Input
+        </h2>
       <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
-      <h2>Font Selector</h2>
+      <h2 style={{ 
+          position: 'relative', 
+          top: "5px", 
+          left: '20px',
+          color: 'white' 
+          }}>
+        Font Selector
+        </h2>
       <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
-      <h2>Color Selector</h2>
+      <h2 style={{  
+          position: 'relative', 
+          top: "5px", 
+          left: '20px',
+          color: 'white' 
+          }}>
+        Color Selector
+        </h2>
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
-      <h2>Tub Color Matching</h2>
+      <h2 style={{ 
+          position: 'relative', 
+          top: "5px", 
+          left: '20px',
+          color: 'white' 
+          }}>
+        Tub Color Matching
+        </h2>
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
-      <h2>Size Selector</h2>
+      <h2 style={{ 
+          position: 'relative', 
+          top: "5px", 
+          left: '20px',
+          color: 'white' 
+          }}>
+        Size Selector
+        </h2>
       <PresetSizeSelector onSelectSize={handlePresetSizeSelect}/>
-      <h2>Custom Size</h2>
+      <h2 style={{ 
+          position: 'relative', 
+          top: "5px", 
+          left: '20px',
+          color: 'white' 
+          }}>
+        Custom Size
+      </h2>
       <CustomSizeSelector onSizeChange={handleCustomSizeChange}/>
-      <h2>Backing Type</h2>
+      <h2 style={{ 
+          position: 'relative', 
+          top: "5px", 
+          left: '20px',
+          color: 'white' 
+          }}>
+        Backing Type
+        </h2>
       <BackingTypeSelector onSelectBackingType={handleBackingTypeSelect}/>
-      <h2>Location</h2>
+      <h2 style={{ 
+          position: 'relative', 
+          top: "5px", 
+          left: '20px',
+          color: 'white' 
+          }}>
+        Location
+        </h2>
       <LocationSelector onSelectLocation={handleLocationSelect}/>
     </div>
   );
