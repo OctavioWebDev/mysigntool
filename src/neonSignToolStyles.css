@@ -46,6 +46,19 @@ body {
   /* Add styles for the logo container */
 }
 
+.rgbGlowEffect {
+  animation: rgbGlowEffect 6s ease-in-out infinite;
+}
+
+
+@keyframes rgbGlowEffect {
+  0%, 100% { text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 30px #FF0000; }
+  25% { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00; }
+  50% { text-shadow: 0 0 10px #0000FF, 0 0 20px #0000FF, 0 0 30px #0000FF; }
+  75% { text-shadow: 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 30px #FF00FF; }
+  100% { text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 30px #FF0000; }
+}
+
 
 .textDisplay {
   display: flex;

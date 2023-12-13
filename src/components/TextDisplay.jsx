@@ -8,9 +8,13 @@ const TextDisplay = ({ text, font, glowColor }) => {
         setIsGlowActive(!isGlowActive);
     };
 
+    const isRgbGlow = glowColor === "RGB";
+    const textDisplayClasses = `textDisplay ${isRgbGlow && isGlowActive ? 'rgbGlowEffect' : ''}`;
+
     const textDisplayStyle = {
         fontFamily: font,
-        textShadow: isGlowActive ? `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}` : "none"
+        textShadow: isGlowActive ? (isRgbGlow ? "0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 0, 255, 0.7)" : `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`) : "none",
+        animation: isRgbGlow && isGlowActive ? 'rgbGlowEffect 3s ease-in-out infinite' : 'none'
     };
 
     return (
@@ -19,7 +23,7 @@ const TextDisplay = ({ text, font, glowColor }) => {
                 <input type="checkbox" onChange={handleGlowToggle} />
                 <span className="slider round"></span>
             </label>
-            <div className="textDisplay" style={textDisplayStyle}>
+            <div className={textDisplayClasses} style={textDisplayStyle}>
                 {text}
             </div>
         </div>
