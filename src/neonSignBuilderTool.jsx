@@ -15,6 +15,7 @@ import './neonSignToolStyles.css';
 function NeonSignBuilderTool() {
 const [textInput, setTextInput] = useState('');
 const [selectedFont, setSelectedFont] = useState('Arial');
+const [selectedColor, setSelectedColor] = useState('#2196f3'); // Default color
 
 const handleTextInputChange = (text) => setTextInput(text);
   const fonts = ["Arial", "Verdana", "Helvetica", "Times New Roman", "Courier New", /* more fonts */ ];
@@ -24,9 +25,10 @@ const handleTextInputChange = (text) => setTextInput(text);
     console.log("Selected font: ", font);
   };
   
-const colors = ["#FF0000", "#00FF00", "#0000FF", "#FFFF00", /* more colors */];
+const colors = ["#FFD700","#ADD8E6", "#FF69B4", "#8F00FF", "#FFA500", "#FFC0CB", "#FF0000", "#FFFFFF", "#0D98BA", "#00008B", "#FAFA33", "#FFFDD0" /* more colors */];
 
 const handleColorSelect = (color) => {
+    setSelectedColor(color)
     console.log("Selected color: ", color);
 };
 const handleTubeColorSelect = (color) => {
@@ -60,7 +62,7 @@ const [location, setLocation] = useState('inside'); // or 'outside'
           }}>
         Express Your-Self
         </h1>
-      <TextDisplay font={selectedFont} text={textInput} />
+      <TextDisplay font={selectedFont} text={textInput} glowColor={selectedColor} />
       <h2 style={{ 
           position: 'relative', 
           top: "5px", 
