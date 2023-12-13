@@ -58,7 +58,7 @@ const [location, setLocation] = useState('inside'); // or 'outside'
           left: '20px',
           color: 'white' 
           }}>
-        Build Your Neon Sign
+        Express Your-Self
         </h1>
       <TextDisplay font={selectedFont} text={textInput} />
       <h2 style={{ 
