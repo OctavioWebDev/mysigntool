@@ -7,6 +7,46 @@ body {
   background-size: cover; */
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 30px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header .menu {
+  display: flex;
+  align-items: center;
+}
+
+.header .menu .hamburger {
+  margin-right: 20px;
+  cursor: pointer;
+  /* Add more styles for the hamburger icon */
+}
+
+.header .menu nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header .menu nav ul li {
+  margin-right: 20px;
+}
+
+.header .logo {
+  /* Add styles for the logo container */
+}
+
+
 .textDisplay {
   display: flex;
   justify-content: center;
@@ -264,6 +304,7 @@ input:checked + .slider:before {
   width: 377px; /* Fixed width */
   padding: 20px 20px; /* Vertical and horizontal padding */
   margin: 0 5px; /* Space between buttons */
+  margin-bottom: 60px;
   text-align: center; /* Center the text */
   border: 1px solid white; /* Border styling */
   border-radius: 4px; /* Rounded corners */
@@ -275,6 +316,36 @@ input:checked + .slider:before {
 .locationSelector button:hover {
   background-color: #9C8AC8;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.footer .cost {
+  /* Styling for the cost section */
+}
+
+.footer .addToCart {
+  /* Styling for the add to cart button section */
+}
+
+.footer .addToCart button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* Add more button styling as needed */
+}
+
 
 
 

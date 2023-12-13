@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from './components/Header';
 import TextInput from './components/TextInput';
 import TextDisplay from './components/TextDisplay';
 import FontSelector from './components/FontSelector';
@@ -8,6 +9,7 @@ import PresetSizeSelector from './components/PresetSizeSelector';
 import CustomSizeSelector from './components/CustomSizeSelector';
 import BackingTypeSelector from './components/BackingTypeSelector';
 import LocationSelector from './components/LocationSelector';
+import Footer from './components/Footer';
 import './neonSignToolStyles.css';
 
 function NeonSignBuilderTool() {
@@ -44,11 +46,15 @@ const handleLocationSelect = (location) => {
   console.log("Selected location: ", location);
 };
 
+const [size, setSize] = useState({ width: 0, height: 0 });
+const [location, setLocation] = useState('inside'); // or 'outside'
+
   return (
     <div className="neonSignBuilderTool">
+      <Header></Header>
       <h1 style={{ 
           position: 'relative', 
-          top: "5px",   
+          top: "60px",   
           left: '20px',
           color: 'white' 
           }}>
@@ -127,6 +133,7 @@ const handleLocationSelect = (location) => {
         Location
         </h2>
       <LocationSelector onSelectLocation={handleLocationSelect}/>
+      <Footer size={size} location={location} />
     </div>
   );
 }
