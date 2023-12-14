@@ -12,6 +12,7 @@ const FontSelector = ({ fonts, onSelectFont }) => {
 
     return (
         <div className="fontSelector">
+            <div className="scrollContainer">
             {fonts.map((font, index) => (
                 <div
                     key={index}
@@ -22,6 +23,7 @@ const FontSelector = ({ fonts, onSelectFont }) => {
                     {font}
                 </div>
             ))}
+            </div>
         </div>
     );
 };

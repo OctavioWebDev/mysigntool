@@ -13,20 +13,21 @@ const ColorSelector = ({ colors, onSelectColor }) => {
     return (
         
         <div className="colorSelector">
-            <div className={`colorBox ${selectedColor === 'RGB' ? 'selected' : ''}`}
-                onClick={() => handleSelectColor('RGB')}
-                /* Additional styling for RGB color box */ >
-                RGB
-            </div>
+            <div className="scrollContainer">
+                <div className={`colorBox rgb ${selectedColor === 'RGB' ? 'selected' : ''}`}
+                    onClick={() => handleSelectColor('RGB')}
+                    /* Additional styling for RGB color box */ >
+                </div>
             
-            {colors.map((color, index) => (
-                <div
-                    key={color}
-                    className={`colorBox ${selectedColor === color ? 'selected' : ''}`}
-                    style={{ backgroundColor: color }}
-                    onClick={() => handleSelectColor(color)}
-                />
-            ))}
+                {colors.map((color, index) => (
+                    <div
+                        key={color}
+                        className={`colorBox ${selectedColor === color ? 'selected' : ''}`}
+                        style={{ backgroundColor: color }}
+                        onClick={() => handleSelectColor(color)}
+                    />
+                    ))}
+            </div>
         </div>
     );
 };
