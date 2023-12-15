@@ -32,19 +32,24 @@ const handleColorSelect = (color) => {
     console.log("Selected color: ", color);
 };
 const handleTubeColorSelect = (color) => {
+
   console.log("Selected tube color: ", color);
 };
 const handlePresetSizeSelect = (size) => {
+  setSize(size);
   console.log("Selected preset size: ", size);
 };
 
 const handleCustomSizeChange = (size) => {
+  setSize(size);
   console.log("Selected custom size: ", size);
 };
 const handleBackingTypeSelect = (type) => {
+
   console.log("Selected backing type: ", type);
 };
 const handleLocationSelect = (location) => {
+  setLocation(location);
   console.log("Selected location: ", location);
 };
 

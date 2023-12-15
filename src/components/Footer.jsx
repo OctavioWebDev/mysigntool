@@ -5,7 +5,7 @@ const Footer = ({ size, location }) => {
     const totalSize = size.width * size.height;
 
     // Price per square inch
-    const pricePerSquareInch = 2;
+    const pricePerSquareInch = .6;
 
     // Calculate base cost
     let cost = totalSize * pricePerSquareInch;
