@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
-import TextInput from './components/TextInput';
-import TextDisplay from './components/TextDisplay';
-import FontSelector from './components/FontSelector';
-import ColorSelector from './components/ColorSelector';
-import TubeColorSelector from './components/TubeColorSelector';
-import PresetSizeSelector from './components/PresetSizeSelector';
-import CustomSizeSelector from './components/CustomSizeSelector';
-import BackingTypeSelector from './components/BackingTypeSelector';
-import LocationSelector from './components/LocationSelector';
-import Footer from './components/Footer';
-import './neonSignToolStyles.css';
+import Header from '../components/Header';
+import TextInput from '../components/TextInput';
+import TextDisplay from '../components/TextDisplay';
+import FontSelector from '../components/FontSelector';
+import ColorSelector from '../components/ColorSelector';
+import TubeColorSelector from '../components/TubeColorSelector';
+import PresetSizeSelector from '../components/PresetSizeSelector';
+import CustomSizeSelector from '../components/CustomSizeSelector';
+import BackingTypeSelector from '../components/BackingTypeSelector';
+import LocationSelector from '../components/LocationSelector';
+import Footer from '../components/Footer';
+import '../neonSignToolStyles.css';
 
 function NeonSignBuilderTool() {
 const [textInput, setTextInput] = useState('');
