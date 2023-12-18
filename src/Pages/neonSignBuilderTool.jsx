@@ -68,50 +68,50 @@ const [location, setLocation] = useState('inside'); // or 'outside'
         Express Your-Self
         </h1>
       <TextDisplay font={selectedFont} text={textInput} glowColor={selectedColor} />
-      <h2 style={{ 
+      <h1 style={{ 
           position: 'relative', 
           top: "5px", 
           left: '20px',
           color: 'white' 
           }}>
         Text Input
-        </h2>
+        </h1>
       <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
-      <h2 style={{ 
+      <h1 style={{ 
           position: 'relative', 
           top: "5px", 
           left: '20px',
           color: 'white' 
           }}>
         Font Selector
-        </h2>
+        </h1>
       <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
-      <h2 style={{  
+      <h1 style={{  
           position: 'relative', 
           top: "5px", 
           left: '20px',
           color: 'white' 
           }}>
         Color Selector
-        </h2>
+        </h1>
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
-      <h2 style={{ 
+      <h1 style={{ 
           position: 'relative', 
           top: "5px", 
           left: '20px',
           color: 'white' 
           }}>
         Tub Color Matching
-        </h2>
+        </h1>
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
-      <h2 style={{ 
+      <h1 style={{ 
           position: 'relative', 
           top: "5px", 
           left: '20px',
           color: 'white' 
           }}>
-        Size Selector
-        </h2>
+        Size
+        </h1>
       <PresetSizeSelector onSelectSize={handlePresetSizeSelect}/>
       <h2 style={{ 
           position: 'relative', 
@@ -122,23 +122,41 @@ const [location, setLocation] = useState('inside'); // or 'outside'
         Custom Size
       </h2>
       <CustomSizeSelector onSizeChange={handleCustomSizeChange}/>
-      <h2 style={{ 
+      <h1 style={{ 
           position: 'relative', 
-          top: "5px", 
+          top: "0px", 
           left: '20px',
           color: 'white' 
           }}>
         Backing Type
-        </h2>
+        </h1>
+        <h3 style={{ 
+          position: 'relative', 
+          top: "0px", 
+          left: '20px',
+          color: 'white',
+          fontSize: '15px' 
+          }}>
+          Choose which type of backing
+          </h3>
       <BackingTypeSelector onSelectBackingType={handleBackingTypeSelect}/>
-      <h2 style={{ 
+      <h1 style={{ 
           position: 'relative', 
           top: "5px", 
           left: '20px',
           color: 'white' 
           }}>
         Location
-        </h2>
+        </h1>
+        <h3 style={{ 
+          position: 'relative', 
+          top: "0px", 
+          left: '20px',
+          color: 'white',
+          fontSize: '15px' 
+          }}>
+          Add 10% if location is 'outside'
+          </h3>
       <LocationSelector onSelectLocation={handleLocationSelect}/>
       <Footer size={size} location={location} />
     </div>

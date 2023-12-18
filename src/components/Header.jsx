@@ -10,8 +10,8 @@ const Header = ({ logo }) => {
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/express-yourself">Express YourSelf</a></li>
-                        <li><a href="/cart">Cart</a></li>
                         <li><a href="/profile">Profile</a></li>
+                        <li><a href="/cart">Cart</a></li>             
                     </ul>
                 </nav>
             </div>

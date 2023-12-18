@@ -12,6 +12,8 @@ const LandingPage = () => {
         Welcome to the Landing Page!</h1>
       <Header></Header>
       {/* Add your landing page content here */}
+      <div>
+      </div>
     </div>
   );
 };
