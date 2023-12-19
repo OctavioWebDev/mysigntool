@@ -14,7 +14,7 @@
     border: 1px solid white; /* Border styling */
     border-radius: 4px; /* Rounded corners */
     background-color: transparent; /* Background color */
-    color: black; /* Text color */
+    color: white; /* Text color */
     cursor: pointer; /* Cursor style */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
   }

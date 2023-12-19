@@ -16,6 +16,7 @@
     background-color: transparent; /* Background color */
     cursor: pointer; /* Cursor style */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
+    color: white;
   }
   
   .presetSizeSelector button:hover{

@@ -17,6 +17,10 @@ const [textInput, setTextInput] = useState('');
 const [selectedFont, setSelectedFont] = useState('Arial');
 const [selectedColor, setSelectedColor] = useState('#2196f3'); // Default color
 
+const [size, setSize] = useState({ width: 0, height: 0 });
+const [location, setLocation] = useState('inside'); // or 'outside'
+const [customSize, setCustomSize] = useState({ width: 0, height: 0 });
+
 const handleTextInputChange = (text) => setTextInput(text);
   const fonts = ["Arial", "Verdana", "Helvetica", "Times New Roman", "Courier New", /* more fonts */ ];
 
@@ -37,6 +41,7 @@ const handleTubeColorSelect = (color) => {
 };
 const handlePresetSizeSelect = (size) => {
   setSize(size);
+  setCustomSize({ width: 0, height: 0 });
   console.log("Selected preset size: ", size);
 };
 
@@ -53,8 +58,9 @@ const handleLocationSelect = (location) => {
   console.log("Selected location: ", location);
 };
 
-const [size, setSize] = useState({ width: 0, height: 0 });
-const [location, setLocation] = useState('inside'); // or 'outside'
+const handleResetCustomSize = () => {
+  setCustomSize({ width: 0, height: 0 }); ///what this function is supposed to do is reset the sloder but it dosent work
+};
 
   return (
     <div className="neonSignBuilderTool">
@@ -101,7 +107,7 @@ const [location, setLocation] = useState('inside'); // or 'outside'
           left: '20px',
           color: 'white' 
           }}>
-        Tub Color Matching
+        Tube Color Matching
         </h1>
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
       <h1 style={{ 
@@ -112,7 +118,7 @@ const [location, setLocation] = useState('inside'); // or 'outside'
           }}>
         Size
         </h1>
-      <PresetSizeSelector onSelectSize={handlePresetSizeSelect}/>
+        <PresetSizeSelector onSelectSize={handlePresetSizeSelect} onResetCustomSize={handleResetCustomSize} />
       <h2 style={{ 
           position: 'relative', 
           top: "5px", 
