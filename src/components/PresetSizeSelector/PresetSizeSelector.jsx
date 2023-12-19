@@ -3,10 +3,14 @@ import './PresetSizeSelector.css';
 
 const PresetSizeSelector = ({ onSelectSize }) => {
     const sizes = [
-        { label: 'Small', dimensions: '10 x 3' },
-        { label: 'Medium', dimensions: '13 x 4' },
-        { label: 'Large', dimensions: '21 x 6' },
+        { label: 'Small', dimensions: { width: 10, height: 3 } },
+        { label: 'Medium', dimensions: { width: 13, height: 4 } },
+        { label: 'Large', dimensions: { width: 21, height: 6 } },
     ];
+
+    const handleSizeSelection = (dimensions) => {
+        onSelectSize(dimensions);
+    };
 
     return (
         <div className="presetSizeSelector">
@@ -14,7 +18,7 @@ const PresetSizeSelector = ({ onSelectSize }) => {
                 <button
                     key={index}
                     className="sizeButton"
-                    onClick={() => onSelectSize(size.dimensions)}
+                    onClick={() => handleSizeSelection(size.dimensions)}
                 >
                     {size.label}
                 </button>
