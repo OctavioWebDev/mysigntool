@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import TextInput from '../components/TextInput';
-import TextDisplay from '../components/TextDisplay';
-import FontSelector from '../components/FontSelector';
-import ColorSelector from '../components/ColorSelector';
-import TubeColorSelector from '../components/TubeColorSelector';
-import PresetSizeSelector from '../components/PresetSizeSelector';
-import CustomSizeSelector from '../components/CustomSizeSelector';
-import BackingTypeSelector from '../components/BackingTypeSelector';
-import LocationSelector from '../components/LocationSelector';
-import Footer from '../components/Footer';
+import Header from '../components/Header/Header';
+import TextInput from '../components/TextInput/TextInput';
+import TextDisplay from '../components/TextDisplay/TextDisplay';
+import FontSelector from '../components/FontSelector/FontSelector';
+import ColorSelector from '../components/ColorSelector/ColorSelector';
+import TubeColorSelector from '../components/TubeColorMatcher/TubeColorMatcher';
+import PresetSizeSelector from '../components/PresetSizeSelector/PresetSizeSelector';
+import CustomSizeSelector from '../components/CustomSizeSelector/CustomSizeSelector';
+import BackingTypeSelector from '../components/BackingTypeSelector/BackingTypeSelector';
+import LocationSelector from '../components/LocationSelector/LocationSelector';
+import Footer from '../components/Footer/Footer';
 import '../neonSignToolStyles.css';
 
 function NeonSignBuilderTool() {

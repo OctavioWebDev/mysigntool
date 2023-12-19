@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './LocationSelector.css';
 
 const LocationSelector = ({ onSelectLocation }) => {
     const [selectedLocation, setSelectedLocation] = useState('');

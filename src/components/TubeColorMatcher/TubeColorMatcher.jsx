@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../neonSignToolStyles.css';
+import './TubeColorMatcher.css'
 
-const TubeColorSelector = ({ onSelectTubeColor }) => {
+const TubeColorMatcher = ({ onSelectTubeColor }) => {
     const [selectedTubeColor, setSelectedTubeColor] = useState('');
 
     const handleSelectTubeColor = (color) => {
@@ -29,4 +29,4 @@ const TubeColorSelector = ({ onSelectTubeColor }) => {
     );
 };
 
-export default TubeColorSelector;
+export default TubeColorMatcher;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ColorSelector.css';
 
 const ColorSelector = ({ colors, onSelectColor }) => {
     const [selectedColor, setSelectedColor] = useState(colors[0]);

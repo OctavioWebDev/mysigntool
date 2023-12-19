@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './FontSelector.css';
 
 const FontSelector = ({ fonts, onSelectFont }) => {
     const [selectedFont, setSelectedFont] = useState('');

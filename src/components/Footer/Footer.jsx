@@ -1,4 +1,5 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = ({ size, location }) => {
     // Calculate the total size in square inches

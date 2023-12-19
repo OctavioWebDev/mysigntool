@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../neonSignToolStyles.css';
+import './TextDisplay.css';  
 
 const TextDisplay = ({ text, font, glowColor }) => {
     const [isGlowActive, setIsGlowActive] = useState(false);

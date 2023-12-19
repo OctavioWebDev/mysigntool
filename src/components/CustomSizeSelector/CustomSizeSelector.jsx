@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CustomSizeSelector.css';
 
 const CustomSizeSelector = ({ onSizeChange }) => {
     const [size, setSize] = useState({ width: 10, height: 3 });

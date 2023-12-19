@@ -1,0 +1,23 @@
+.tubeColorSelector {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    /* Add any additional styling you need for the container */
+    margin-bottom: 20px;
+  }
+  
+  /* TubeColorSelector Component */
+  .tubeColorSelector button {
+    width: 367px; /* Fixed width */
+    padding: 20px 20px; /* Vertical and horizontal padding */
+    margin: 0 15px; /* Space between buttons */
+    text-align: center; /* Center the text */
+    border: 1px solid white; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+    background-color: transparent; /* Background color */
+    cursor: pointer; /* Cursor style */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .tubeColorSelector button:hover {
+    background-color: #8C7BB7 /* Slightly change color on hover */
+  }

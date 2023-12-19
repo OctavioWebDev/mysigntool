@@ -1,0 +1,22 @@
+.locationSelector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  /* LocationSelector Component */
+  .locationSelector button {
+    width: 377px; /* Fixed width */
+    padding: 20px 20px; /* Vertical and horizontal padding */
+    margin: 0 5px; /* Space between buttons */
+    margin-bottom: 60px;
+    text-align: center; /* Center the text */
+    border: 1px solid white; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+    background-color: transparent; /* Background color */
+    cursor: pointer; /* Cursor style */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .locationSelector button:hover {
+    background-color: #9C8AC8;
+  }

@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 30px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  .header .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .menu .hamburger {
+    margin-right: 20px;
+    cursor: pointer;
+    /* Add more styles for the hamburger icon */
+  }
+  
+  .header .menu nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header .menu nav ul li {
+    margin-right: 20px;
+  }
+  
+  .header .logo {
+    /* Add styles for the logo container */
+  }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TextInput.css';
 
 const TextInput = ({ placeholder, onTextChange }) => {
     const [text, setText] = useState('');

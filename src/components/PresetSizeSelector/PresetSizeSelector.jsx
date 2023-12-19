@@ -1,4 +1,5 @@
 import React from 'react';
+import './PresetSizeSelector.css';
 
 const PresetSizeSelector = ({ onSelectSize }) => {
     const sizes = [

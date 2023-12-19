@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './BackingTypeSelector';
 
 const BackingTypeSelector = ({ onSelectBackingType }) => {
     const [selectedBackingType, setSelectedBackingType] = useState('');
