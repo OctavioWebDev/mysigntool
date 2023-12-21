@@ -3,9 +3,9 @@ import './PresetSizeSelector.css';
 
 const PresetSizeSelector = ({ onSelectSize, onResetCustomSize }) => {
     const sizes = [
-        { label: 'Small', dimensions: { width: 10, height: 3 } },
-        { label: 'Medium', dimensions: { width: 13, height: 4 } },
-        { label: 'Large', dimensions: { width: 21, height: 6 } },
+        { label: 'Small 10x3', dimensions: { width: 10, height: 3 } },
+        { label: 'Medium 13x4', dimensions: { width: 13, height: 4 } },
+        { label: 'Large 21x6', dimensions: { width: 21, height: 6 } },
     ];
 
     const [selectedSize, setSelectedSize] = useState(null);

@@ -59,7 +59,7 @@ const handleLocationSelect = (location) => {
 };
 
 const handleResetCustomSize = () => {
-  setCustomSize({ width: 0, height: 0 }); ///what this function is supposed to do is reset the sloder but it dosent work
+  setCustomSize({ width: 0, height: 0 }); ///what this function is supposed to do is reset the sloder but it dosent
 };
 
   return (
