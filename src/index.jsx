@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
@@ -8,17 +8,33 @@ import Cart from './Pages/Cart';
 import Profile from './Pages/Profile';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+const App = () => {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+  };
+
+  const removeFromCart = (itemToRemove) => {
+    setCart(cart.filter((item) => item !== itemToRemove));
+  };
+
+  return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/express-yourself" element={<NeonSignBuilderTool />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/express-yourself" element={<NeonSignBuilderTool addToCart={addToCart} />} />
+        <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
   </React.StrictMode>
 );
 
