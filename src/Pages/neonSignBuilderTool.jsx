@@ -21,19 +21,18 @@ const [size, setSize] = useState({ width: 0, height: 0 });
 const [location, setLocation] = useState('inside'); // or 'outside'
 const [customSize, setCustomSize] = useState({ width: 0, height: 0 });
 
+
 const handleTextInputChange = (text) => setTextInput(text);
   const fonts = ["Arial", "Verdana", "Helvetica", "Times New Roman", "Courier New", /* more fonts */ ];
 
   const handleFontSelection = (font) => {
     setSelectedFont(font);
-    console.log("Selected font: ", font);
   };
   
 const colors = ["#FFD700","#ADD8E6", "#FF69B4", "#8F00FF", "#FFA500", "#FFC0CB", "#FF0000", "#FFFFFF", "#0D98BA", "#00008B", "#FAFA33", "#FFFDD0" /* more colors */];
 
 const handleColorSelect = (color) => {
     setSelectedColor(color)
-    console.log("Selected color: ", color);
 };
 const handleTubeColorSelect = (color) => {
 
@@ -42,12 +41,10 @@ const handleTubeColorSelect = (color) => {
 const handlePresetSizeSelect = (size) => {
   setSize(size);
   setCustomSize({ width: 0, height: 0 });
-  console.log("Selected preset size: ", size);
 };
 
 const handleCustomSizeChange = (size) => {
   setSize(size);
-  console.log("Selected custom size: ", size);
 };
 const handleBackingTypeSelect = (type) => {
 
@@ -55,7 +52,6 @@ const handleBackingTypeSelect = (type) => {
 };
 const handleLocationSelect = (location) => {
   setLocation(location);
-  console.log("Selected location: ", location);
 };
 
 const handleResetCustomSize = () => {

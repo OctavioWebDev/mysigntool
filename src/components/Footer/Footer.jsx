@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
+import AddToCartButton from '../AddToCart/AddToCartButton';
 
-const Footer = ({ size, location }) => {
+const Footer = ({ textInput, selectedFont, selectedColor, size, location, customSize }) => {
     // Calculate the total size in square inches
     const totalSize = size.width * size.height;
 
@@ -16,14 +17,26 @@ const Footer = ({ size, location }) => {
         cost += cost * 0.10;
     }
 
+    const [cart, setCart] = useState([]);
+
+    const addToCart = () => {
+        const selections = {
+            textInput,
+            selectedFont,
+            selectedColor,
+            size,
+            location,
+            customSize,
+        };
+        setCart(prevCart => [...prevCart, selections]);
+    };
+
     return (
         <footer className="footer">
             <div className="cost">
                 Total Cost: ${cost.toFixed(2)}
             </div>
-            <div className="addToCart">
-                <button>Add to Cart</button>
-            </div>
+            <AddToCartButton addToCart={addToCart} selections={{ textInput, selectedFont, selectedColor, size, location, customSize }} />
         </footer>
     );
 };

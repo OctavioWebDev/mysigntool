@@ -4,10 +4,6 @@ import Header from '../components/Header/Header';
 const Cart = () => {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (selections) => {
-    setCart([...cart, selections]);
-  };
-
   const removeFromCart = (selectionsToRemove) => {
     setCart(cart.filter((selections) => selections !== selectionsToRemove));
   };
