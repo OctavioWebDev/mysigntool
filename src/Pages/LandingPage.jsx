@@ -7,11 +7,11 @@ const LandingPage = () => {
     
     <div className="main-container">
       <Header />
-      <h1 className="welcome-header">Illuminate Your World with FaceIt Custom Neon Signs</h1>
+      <h1 className="welcome-header">Illuminate Your World with Scotty B's LEDs Custom Neon Signs</h1>
       <section className="section1">
-        <h2 >Welcome to FaceIt, where your brightest ideas shine in neon!</h2>
+        <h2 >Welcome Scotty B's LEDs, where your brightest ideas shine in neon!</h2>
         <p>
-          At FaceIt, we're passionate about lighting up your world with custom,
+          At Scotty B's LEDs, we're passionate about lighting up your world with custom,
           high-quality neon signs. With over two decades of expertise in the field, 
           our commitment is to turn your vision into a luminous reality. Perfect for 
           businesses, special events, or personal home decor, our neon signs are crafted 
@@ -20,7 +20,7 @@ const LandingPage = () => {
       </section>
 
       <section className="section2">
-        <h2>Why Choose FaceIt?</h2>
+        <h2>Why Scotty B's LEDs?</h2>
         <p>
           -Tailored to Your Taste: We specialize in creating custom designs that reflect 
             your style and needs.
