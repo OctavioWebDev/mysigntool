@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './TextInput.css';
 
 const TextInput = ({ placeholder, onTextChange }) => {
     const [text, setText] = useState('');
@@ -17,9 +16,10 @@ const TextInput = ({ placeholder, onTextChange }) => {
             value={text} 
             onChange={handleChange} 
             placeholder={placeholder}
-            className="textInput" 
+            className="inline-block p-3.5 mx-2.5 h-20 w-full max-w-4.5xl border border-white border-solid  rounded text-base bg-transparent text-white"
         />
     );
 };
 
 export default TextInput;
+

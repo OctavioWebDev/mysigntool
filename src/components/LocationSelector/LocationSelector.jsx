@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './LocationSelector.css';
 
 const LocationSelector = ({ onSelectLocation }) => {
     const [selectedLocation, setSelectedLocation] = useState('');
@@ -12,15 +11,19 @@ const LocationSelector = ({ onSelectLocation }) => {
     };
 
     return (
-        <div className="locationSelector">
+        <div className="flex justify-center mb-5">
             <button
-                className={`locationButton ${selectedLocation === 'inside' ? 'selected' : ''}`}
+                className={`w-96 px-5 py-2.5 mx-1 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                    selectedLocation === 'inside' ? 'bg-purple-600 text-white' : 'bg-transparent text-white'
+                }`}
                 onClick={() => handleSelectLocation('inside')}
             >
                 Inside
             </button>
             <button
-                className={`locationButton ${selectedLocation === 'outside' ? 'selected' : ''}`}
+                className={`w-96 px-5 py-2.5 mx-1 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                    selectedLocation === 'outside' ? 'bg-purple-600 text-white' : 'bg-transparent text-white'
+                }`}
                 onClick={() => handleSelectLocation('outside')}
             >
                 Outside
@@ -30,3 +33,4 @@ const LocationSelector = ({ onSelectLocation }) => {
 };
 
 export default LocationSelector;
+

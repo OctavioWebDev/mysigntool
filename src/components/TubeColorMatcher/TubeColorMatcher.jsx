@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './TubeColorMatcher.css'
 
 const TubeColorMatcher = ({ onSelectTubeColor }) => {
     const [selectedTubeColor, setSelectedTubeColor] = useState('');
@@ -12,15 +11,19 @@ const TubeColorMatcher = ({ onSelectTubeColor }) => {
     };
 
     return (
-        <div className="tubeColorSelector">
+        <div className="flex justify-center mb-5">
             <button
-                className={`tubeColorButton ${selectedTubeColor === 'white' ? 'selected' : ''}`}
+                className={`px-5 py-2.5 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                    selectedTubeColor === 'white' ? 'bg-purple-600 text-white' : 'bg-transparent text-white hover:bg-purple-500'
+                } w-92`}
                 onClick={() => handleSelectTubeColor('white')}
             >
                 White Tube
             </button>
             <button
-                className={`tubeColorButton ${selectedTubeColor === 'colorMatching' ? 'selected' : ''}`}
+                className={`px-5 py-2.5 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                    selectedTubeColor === 'colorMatching' ? 'bg-purple-600 text-white' : 'bg-transparent text-white hover:bg-purple-500'
+                } w-92`}
                 onClick={() => handleSelectTubeColor('colorMatching')}
             >
                 Color Matching
@@ -30,3 +33,4 @@ const TubeColorMatcher = ({ onSelectTubeColor }) => {
 };
 
 export default TubeColorMatcher;
+

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './FontSelector.css';
 
 const FontSelector = ({ fonts, onSelectFont }) => {
     const [selectedFont, setSelectedFont] = useState('');
@@ -12,21 +11,24 @@ const FontSelector = ({ fonts, onSelectFont }) => {
     };
 
     return (
-        <div className="fontSelector">
-            <div className="scrollContainer">
-            {fonts.map((font, index) => (
-                <div
-                    key={index}
-                    className={`fontBox ${selectedFont === font ? 'selected' : ''}`}
-                    style={{ fontFamily: font }}
-                    onClick={() => handleSelectFont(font)}
-                >
-                    {font}
-                </div>
-            ))}
+        <div className="overflow-x-auto whitespace-wrap">
+            <div className="flex flex-row">
+                {fonts.map((font, index) => (
+                    <div
+                        key={index}
+                        className={`px-5 py-2.5 mx-1 text-center cursor-pointer border border-white rounded transition duration-300 ease-in-out ${
+                            selectedFont === font ? 'bg-purple-600' : 'bg-transparent'
+                        }`}
+                        style={{ fontFamily: font }}
+                        onClick={() => handleSelectFont(font)}
+                    >
+                        {font}
+                    </div>
+                ))}
             </div>
         </div>
     );
 };
 
 export default FontSelector;
+

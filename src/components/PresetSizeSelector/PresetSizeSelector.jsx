@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './PresetSizeSelector.css';
 
 const PresetSizeSelector = ({ onSelectSize, onResetCustomSize }) => {
     const sizes = [
@@ -17,11 +16,13 @@ const PresetSizeSelector = ({ onSelectSize, onResetCustomSize }) => {
     };
 
     return (
-        <div className="presetSizeSelector">
+        <div className="flex justify-center">
             {sizes.map((size, index) => (
                 <button
                     key={index}
-                    className={`sizeButton ${selectedSize === size.dimensions ? 'selected' : ''}`}
+                    className={`px-7 py-2.5 mx-2 mb-2 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out h-15 w-175 ${
+                        selectedSize === size.dimensions ? 'bg-purple-600 border-purple-600 text-white' : 'bg-transparent text-white hover:bg-purple-500'
+                    }`}
                     onClick={() => handleSizeSelection(size.dimensions)}
                 >
                     {size.label}
@@ -32,3 +33,4 @@ const PresetSizeSelector = ({ onSelectSize, onResetCustomSize }) => {
 };
 
 export default PresetSizeSelector;
+

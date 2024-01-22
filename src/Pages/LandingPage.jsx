@@ -177,10 +177,27 @@ const LandingPage = () => {
               </p>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
-              {/* <form className="flex space-x-2">
-                <Input className="max-w-lg flex-1" placeholder="Enter your email" type="email" />
-                <Button type="submit">Sign Up</Button>
-              </form> */}
+                <form className="flex space-x-2">
+                  <input 
+                      className="max-w-lg flex-1 
+                      rounded-md border border-gray-200 bg-white 
+                      px-8 text-sm font-medium shadow-sm transition-colors focus:border-gray-300 
+                      focus:ring focus:ring-gray-200 focus:ring-opacity-50"
+                      placeholder="Enter your email" 
+                      type="email"
+                  />
+                    <button 
+                      type="submit"
+                      className="inline-flex h-10 
+                      items-center justify-center 
+                      rounded-md bg-gray-900 px-8 
+                      text-sm font-medium text-gray-50 
+                      shadow transition-colors hover:bg-gray-900/90 
+                      focus-visible:outline-none 
+                      focus-visible:ring-1 focus-visible:ring-gray-950 
+                      disabled:pointer-events-none disabled:opacity-50"
+                  >Sign Up</button>
+                </form>
               <p className="text-xs text-gray-500 dark:text-gray-400">
               Ready to Light Up Your Idea?
                 <Link className="underline underline-offset-2" href="#">

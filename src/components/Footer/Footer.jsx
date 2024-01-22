@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Footer.css';
 import AddToCartButton from '../AddToCart/AddToCartButton';
 
 const Footer = ({ textInput, selectedFont, selectedColor, size, location, customSize }) => {
@@ -32,8 +31,8 @@ const Footer = ({ textInput, selectedFont, selectedColor, size, location, custom
     };
 
     return (
-        <footer className="footer">
-            <div className="cost">
+        <footer className="flex justify-between items-center bg-black text-white p-2.5 fixed bottom-0 w-full z-50">
+            <div className="ml-1">
                 Total Cost: ${cost.toFixed(2)}
             </div>
             <AddToCartButton addToCart={addToCart} selections={{ textInput, selectedFont, selectedColor, size, location, customSize }} />
@@ -42,3 +41,4 @@ const Footer = ({ textInput, selectedFont, selectedColor, size, location, custom
 };
 
 export default Footer;
+
