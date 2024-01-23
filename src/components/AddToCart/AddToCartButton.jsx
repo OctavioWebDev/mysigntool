@@ -1,5 +1,4 @@
 import React from 'react';
-import './AddToCartButton.css';
 
 const AddToCartButton = ({ addToCart, selections }) => {
   console.log(typeof addToCart);
@@ -8,9 +7,14 @@ const AddToCartButton = ({ addToCart, selections }) => {
       }
 
   return (
-    <div className="addToCartButton">
-      <button onClick={handleAddToCart}>Add to Cart</button>
-    </div>
+      <button 
+      onClick={handleAddToCart}
+      className=
+      "bg-transparent hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Add to Cart
+        </button>
+   
   );
 };
 
