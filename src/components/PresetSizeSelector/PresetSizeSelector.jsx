@@ -20,8 +20,8 @@ const PresetSizeSelector = ({ onSelectSize, onResetCustomSize }) => {
             {sizes.map((size, index) => (
                 <button
                     key={index}
-                    className={`px-7 py-2.5 mx-2 mb-2 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out h-15 w-175 ${
-                        selectedSize === size.dimensions ? 'bg-purple-600 border-purple-600 text-white' : 'bg-transparent text-white hover:bg-purple-500'
+                    className={`px-5 py-3 mx-1 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                        selectedSize === size.dimensions ? 'bg-purple-700 border-purple-700 text-white' : 'bg-transparent text-white hover:bg-purple-600'
                     }`}
                     onClick={() => handleSizeSelection(size.dimensions)}
                 >

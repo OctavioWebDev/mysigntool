@@ -83,34 +83,34 @@ const handleResetCustomSize = () => {
           </Link>
         </nav>
       </header>
-      <h1 className="absoulte left-5 text-white text-2xl">Express Your-Self</h1>
+      <h1 className="absoulte ml-2 mt-6 mb-6 text-white text-2xl">Express Your-Self</h1>
       <TextDisplay font={selectedFont} text={textInput} glowColor={selectedColor} />
       
-      <h1 className="relative top-1 left-5 text-white text-2xl">Text Input</h1>
+      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Text Input</h1>
       <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
       
-      <h1 className="relative top-1 left-5 text-white text-2xl">Font Selector</h1>
+      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Font Selector</h1>
       <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
       
-      <h1 className="relative top-1 left-5 text-white text-2xl">Color Selector</h1>
+      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Color Selector</h1>
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
       
-      <h1 className="relative top-1 left-5 text-white text-2xl">Tube Color Matching</h1>
+      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Tube Color Matching</h1>
       <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
       
-      <h1 className="relative top-1 left-5 text-white text-2xl">Size</h1>
+      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Size</h1>
       <PresetSizeSelector onSelectSize={handlePresetSizeSelect} onResetCustomSize={handleResetCustomSize} />
       
-      <h2 className="relative top-1 left-5 text-white text-xl">Custom Size</h2>
+      <h2 className="relative top-1 left-5 mt-6 mb-6 text-white text-xl">Custom Size</h2>
       <CustomSizeSelector onSizeChange={handleCustomSizeChange} />
       
-      <h1 className="relative top-0 left-5 text-white text-2xl">Backing Type</h1>
-      <h3 className="relative top-0 left-5 text-white text-sm">Choose which type of backing</h3>
+      <h1 className="relative top-0 left-5 mt-6 mb-6 text-white text-2xl">Backing Type</h1>
+      <h3 className="relative top-0 left-5 mt-6 mb-6 text-white text-sm">Choose which type of backing</h3>
       <BackingTypeSelector onSelectBackingType={handleBackingTypeSelect} />
       
-      <h1 className="relative top-1 left-5 text-white text-2xl">Location</h1>
-      <h3 className="relative top-0 left-5 text-white text-sm">Add 10% if location is 'outside'</h3>
-      <LocationSelector onSelectLocation={handleLocationSelect} />
+      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Location</h1>
+      <h3 className="relative top-0 left-5 mt-6 mb-6 text-white text-sm">Add 10% if location is 'outside'</h3>
+      <LocationSelector onSelectLocation={handleLocationSelect}/>
       
       <Footer size={size} location={location} />
     </div>

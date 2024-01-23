@@ -16,7 +16,7 @@ const TextInput = ({ placeholder, onTextChange }) => {
             value={text} 
             onChange={handleChange} 
             placeholder={placeholder}
-            className="inline-block p-3.5 mx-2.5 h-20 w-full max-w-4.5xl border border-white border-solid  rounded text-base bg-transparent text-white"
+            className="inline-block ml-2 mx-2.5 h-20 w-full max-w-4.5xl border border-white border-solid  rounded text-base bg-transparent text-white"
         />
     );
 };
