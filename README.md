@@ -1,8 +1,8 @@
 ### Project Overview
-The neon sign builder tool is a web-based application designed for users to create custom neon signs. It offers a dynamic and interactive interface where users can specify various aspects of their neon sign, including text, font, color, size, and backing type. This tool is aimed at providing a user-friendly experience for customizing neon signs, catering to both personal and commercial needs.
+The LED sign builder tool is a web-based application designed for users to create custom LED signs. It offers a dynamic and interactive interface where users can specify various aspects of their LED sign, including text, font, color, size, and backing type. This tool is aimed at providing a user-friendly experience for customizing LED signs, catering to both personal and commercial needs.
 
 ### Key Features
-- **Text Input**: Users can enter the text they want on their neon sign.
+- **Text Input**: Users can enter the text they want on their LED sign.
 - **Font Selection**: A range of fonts is available for users to choose from, enhancing the sign's aesthetic appeal.
 - **Color Selection**: Users can pick from various colors for their sign. There's also an option for an RGB glow effect, where the color dynamically changes through an RGB spectrum.
 - **Size Customization**: The tool provides preset size options along with a custom size selector, allowing users precise control over the dimensions of their sign.
@@ -22,4 +22,4 @@ The neon sign builder tool is a web-based application designed for users to crea
 - **User Account Integration**: Potential development to allow users to save designs or order history.
 
 ### Conclusion
-This neon sign builder tool stands out for its interactivity, customization options, and real-time feedback, making the process of designing neon signs both engaging and user-friendly. With future enhancements, it aims to provide an even more comprehensive and seamless experience from design to purchase.
+This LED sign builder tool stands out for its interactivity, customization options, and real-time feedback, making the process of designing LED signs both engaging and user-friendly. With future enhancements, it aims to provide an even more comprehensive and seamless experience from design to purchase.

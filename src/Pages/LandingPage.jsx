@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import promoVideo from '../assets/Scotty B\'s LED\'s Promo.mp4';
+import uncleJohns from '../assets/ScottyBsLEDpics/245398213_1300694530390420_8635895171047700084_n.jpeg';
 
 const LandingPage = () => {
 
@@ -32,23 +34,25 @@ const LandingPage = () => {
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <img
-                alt="Hero"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-                height="550"
-                src="/placeholder.svg"
-                width="550"
-              />
+            <video
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+              height="550"
+              width="550"
+              controls
+            >
+              <source src={promoVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                  Welcome Scotty B's LEDs, where your brightest ideas shine in neon!
+                  Welcome Scotty B's LEDs, where your brightest ideas shine in LED!
                   </h1>
                   <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                   At Scotty B's LEDs, we're passionate about lighting up your world with custom,
-          high-quality neon signs. With over two decades of expertise in the field, 
+          high-quality LED signs. With over two decades of expertise in the field, 
           our commitment is to turn your vision into a luminous reality. Perfect for 
-          businesses, special events, or personal home decor, our neon signs are crafted 
+          businesses, special events, or personal home decor, our LED signs are crafted 
           to add a unique glow to any space.
                   </p>
                 </div>
@@ -78,7 +82,7 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -87,18 +91,18 @@ const LandingPage = () => {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Skilled Craftsmanship.  Prompt Delivery.</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Our team's expertise in neon artistry guarantees that each sign is a piece of illuminated perfection.  We value your time, 
-                ensuring swift and reliable delivery of your neon sign.
+                Our team's expertise in LED artistry guarantees that each sign is a piece of illuminated perfection.  We value your time, 
+                ensuring swift and reliable delivery of your LED sign.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-              <img
-                alt="PlaceHolderImage"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                height="310"
-                src="/placeholder.svg"
-                width="550"
+            <img
+              alt="unclejohns"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+              height="310"
+              src={uncleJohns}
+              width="550"
               />
               <div className="flex flex-col justify-center space-y-4">
                 <ul className="grid gap-6">
@@ -129,17 +133,118 @@ const LandingPage = () => {
                 </ul>
               </div>
             </div>
+            <div className="flex flex-col ml- gap-2 min-[400px]:flex-row">
+                  <Link
+                    className="inline-flex h-10 items-center justify-center rounded-md 
+                    bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors 
+                    hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 
+                    disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900
+                     dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                    href="#"
+                  >
+                    Get Started
+                  </Link>
+                  <Link
+                    className="inline-flex h-10 items-center justify-center rounded-md border
+                      border-gray-200 bg-white px-8 text-sm font-medium shadow-sm 
+                     transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
+                      focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
+                       dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                    href="#"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                {/* <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                Transform Your Business with Dynamic Digital Signs
+                </div> */}
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Transform Your Space with Dynamic Digital Signs</h2>
+                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                At Scotty B's LEDs, we're not just about illuminating your world with bespoke LED creations; we're also at the forefront 
+                of bringing cutting-edge digital signage solutions to businesses and homes alike. Our digital signs offer an innovative 
+                way to display vibrant visuals, dynamic messages, and interactive content, transforming any space into a captivating experience.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+              <img
+                alt="PlaceHolderImage"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                height="310"
+                src="/placeholder.svg"
+                width="550"
+              />
+              <div className="flex flex-col justify-center space-y-4">
+                <ul className="grid gap-6">
+                  <li>
+                    <div className="grid gap-1">
+                      <h3 className="text-xl font-bold">Versatile Solutions for Every Need</h3>
+                      <p className="text-gray-500 dark:text-gray-400">
+                      Whether you're looking to enhance customer engagement in your retail store, 
+                      showcase menus in your restaurant in style, or add a modern touch to your 
+                      home with artful displays, our digital signs are designed to meet a wide 
+                      array of needs. With crisp, clear imagery and seamless video playback, our 
+                      digital signs ensure your message is not just seen but remembered.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="grid gap-1">
+                      <h3 className="text-xl font-bold">Customized to Your Specifications</h3>
+                      <p className="text-gray-500 dark:text-gray-400">
+                      Understanding that every client has unique requirements, Scotty B's LEDs 
+                      specializes in custom digital signage solutions. From the drawing board to 
+                      installation, our team works closely with you to create digital signs that 
+                      reflect your brand's personality and cater to your specific objectives. Choose 
+                      from a variety of sizes, formats, and mounting options to fit perfectly in your designated space.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="grid gap-1">
+                      <h3 className="text-xl font-bold"> Easy to Update, Effortless to Manage</h3>
+                      <p className="text-gray-500 dark:text-gray-400">
+                      Gone are the days of static displays. Our digital signs come equipped with 
+                      user-friendly software that allows for easy updates in real-time. Whether 
+                      it's promoting a limited-time offer, sharing news, or celebrating a special 
+                      occasion, changing your content is just a few clicks away. This flexibility 
+                      ensures your digital signs remain relevant, engaging, and perfectly aligned 
+                      with your evolving needs.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="grid gap-1">
+                      <h3 className="text-xl font-bold">Energy-Efficient and Long-Lasting</h3>
+                      <p className="text-gray-500 dark:text-gray-400">
+                      Embracing the latest in technology doesn't mean compromising on efficiency. 
+                      Scotty B's LEDs is committed to sustainability, offering digital signs that 
+                      are not only bright and beautiful but also energy-efficient and durable. 
+                      Enjoy the brilliance of digital signage with the peace of mind that you're 
+                      making an environmentally friendly choice.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 bg-gray-800 border-t lg:py-32">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              Personalize your space with a unique neon touch.
+              Personalize your space with a unique LED touch.
               </h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed 
               lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Make your events memorable with our custom neon signs.
+              Make your events memorable with our custom LED signs.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
@@ -170,10 +275,10 @@ const LandingPage = () => {
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              Boost your brand's visibility with a striking neon sign.
+              Boost your brand's visibility with a striking LED sign.
               </h2>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              No matter your idea, we're here to bring it to neon life
+              No matter your idea, we're here to bring it to LED life
               </p>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
@@ -207,16 +312,12 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 border-t">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800 border-t">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
               <div className="space-y-4">
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-                  Ready to Light Up Your Idea?
-                </div>
                 <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                  Get in touch with us today to begin crafting your dream neon sign. At Scotty B's LED's, 
-                  we're excited to make your bright ideas a neon reality!
+                  Get in touch with us today to begin crafting your dream LED sign.
                 </h2>
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium
@@ -229,10 +330,9 @@ const LandingPage = () => {
                 </Link>
               </div>
               <div className="flex flex-col items-start space-y-4">
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Security</div>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                  Fully managed infrastructure designed to scale dynamically with your traffic, a global edge to ensure
-                  your site is fast for every customer, and the tools to monitor every aspect of your app.
+                At Scotty B's LED's, 
+                  we're excited to make your bright ideas a LIT reality!
                 </p>
                 <Link
                   className="inline-flex h-9 items-center justify-center rounded-md border

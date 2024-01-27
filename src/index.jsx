@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import LandingPage from './Pages/LandingPage';
-import NeonSignBuilderTool from './Pages/neonSignBuilderTool';
+import LEDSignBuilderTool from './Pages/LEDSignBuilderTool';
 import Cart from './Pages/Cart';
 import Profile from './Pages/Profile';
 import reportWebVitals from './reportWebVitals';
@@ -23,7 +23,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/express-yourself" element={<NeonSignBuilderTool addToCart={addToCart} />} />
+        <Route path="/express-yourself" element={<LEDSignBuilderTool addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
