@@ -3,16 +3,13 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      height: {
-        '200' : '31.25rem',
-      },
-      width: {
-        '200' : '50rem'
-      }
+      
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      
+    },
   },
   plugins: [
     require('flowbite/plugin')

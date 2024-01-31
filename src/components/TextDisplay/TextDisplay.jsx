@@ -8,7 +8,7 @@ const TextDisplay = ({ text, font, glowColor }) => {
     };
 
     const isRgbGlow = glowColor === "RGB";
-    const textDisplayClasses = `flex justify-center items-center ml-2 text-5xl h-200 mx-2.5 py-2 border-none rounded bg-gray-800 text-white overflow-hidden ${isRgbGlow && isGlowActive ? 'rgbGlowEffect' : ''}`;
+    const textDisplayClasses = `flex justify-center items-center ml-2 text-5xl max-h-[500px] max-w-[800px] mx-2.5 py-2 border-none rounded bg-gray-800 text-white overflow-hidden ${isRgbGlow && isGlowActive ? 'rgbGlowEffect' : ''}`;
 
     const textDisplayStyle = {
         fontFamily: font,
@@ -18,7 +18,10 @@ const TextDisplay = ({ text, font, glowColor }) => {
 
     return (
         <div className="relative">
-            <div className={textDisplayClasses} style={textDisplayStyle}>
+            <div 
+                className={textDisplayClasses} 
+                style={textDisplayStyle}
+                >
                 {text}
             </div>
             <label className="absolute bottom-2 left-3 mb-2 ml-2 inline-flex items-center cursor-pointer">

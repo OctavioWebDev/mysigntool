@@ -96,18 +96,17 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+          <div className="flex flex-col lg:flex-row gap-9 max-w-5xl mx-auto py-12">
             <img
               alt="unclejohns"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-              height="310"
+              className="mx-auto max-h-[500px] max-w-[800px] overflow-hidden rounded-xl object-cover object-center lg:w-1/2"
               src={uncleJohns}
-              width="550"
-              />
-              <div className="flex flex-col justify-center space-y-4">
-                <ul className="grid gap-6">
+            />
+              <div className="flex flex-col justify-center lg:w-1/2">
+              <div className="flex flex-col justify-center space-y-12">
+                <ul className="grid gap-8">
                   <li>
-                    <div className="grid gap-1">
+                    <div className="grid gap-2">
                       <h3 className="text-xl font-bold">Tailored to Your Taste</h3>
                       <p className="text-gray-500 dark:text-gray-400">
                       We specialize in creating custom designs that reflect your style and needs.
@@ -115,7 +114,7 @@ const LandingPage = () => {
                     </div>
                   </li>
                   <li>
-                    <div className="grid gap-1">
+                    <div className="grid gap-2">
                       <h3 className="text-xl font-bold">Unmatched Quality</h3>
                       <p className="text-gray-500 dark:text-gray-400">
                       Our signs are made with top-tier materials, ensuring both beauty and longevity.
@@ -123,7 +122,7 @@ const LandingPage = () => {
                     </div>
                   </li>
                   <li>
-                    <div className="grid gap-1">
+                    <div className="grid gap-2">
                       <h3 className="text-xl font-bold"> Eco-Friendly Efficiency</h3>
                       <p className="text-gray-500 dark:text-gray-400">
                       SB's LED's are not just eye-catching; they're also energy-efficient.
@@ -131,9 +130,7 @@ const LandingPage = () => {
                     </div>
                   </li>
                 </ul>
-              </div>
-            </div>
-            <div className="flex flex-col ml- gap-2 min-[400px]:flex-row">
+            <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md 
                     bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors 
@@ -155,15 +152,15 @@ const LandingPage = () => {
                     Contact Us
                   </Link>
                 </div>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-transparent">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                {/* <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-                Transform Your Business with Dynamic Digital Signs
-                </div> */}
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Transform Your Space with Dynamic Digital Signs</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 At Scotty B's LEDs, we're not just about illuminating your world with bespoke LED creations; we're also at the forefront 
@@ -236,42 +233,7 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 bg-gray-800 border-t lg:py-32">
-          <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              Personalize your space with a unique LED touch.
-              </h2>
-              <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed 
-              lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Make your events memorable with our custom LED signs.
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
-              <Link
-                className="inline-flex h-10 items-center justify-center rounded-md
-                 bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors
-                  hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 
-                  disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90
-                   dark:focus-visible:ring-gray-300"
-                href="#"
-              >
-                Contact Us
-              </Link>
-              <Link
-                className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200
-                 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100
-                  hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 
-                  disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950
-                   dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                href="#"
-              >
-                Learn more
-              </Link>
-            </div>
-          </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 border-t">
+      <section className="w-full bg-gray-800 py-12 md:py-24 lg:py-32 border-t">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
@@ -309,42 +271,6 @@ const LandingPage = () => {
                   Terms & Conditions
                 </Link>
               </p>
-            </div>
-          </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-800 border-t">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
-              <div className="space-y-4">
-                <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                  Get in touch with us today to begin crafting your dream LED sign.
-                </h2>
-                <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium
-                   text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1
-                    focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900
-                     dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                  href="#"
-                >
-                  Get Started
-                </Link>
-              </div>
-              <div className="flex flex-col items-start space-y-4">
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                At Scotty B's LED's, 
-                  we're excited to make your bright ideas a LIT reality!
-                </p>
-                <Link
-                  className="inline-flex h-9 items-center justify-center rounded-md border
-                   border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100
-                    hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 
-                    disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950
-                     dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                  href="#"
-                >
-                  Contact Us
-                </Link>
-              </div>
             </div>
           </div>
         </section>
