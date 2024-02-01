@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import promoVideo from '../assets/Scotty B\'s LED\'s Promo.mp4';
+import promoVideo from '../assets/Videos/Scotty B\'s LED\'s Promo.mp4';
 import uncleJohns from '../assets/ScottyBsLEDpics/245398213_1300694530390420_8635895171047700084_n.jpeg';
-
+import digiSign1 from '../assets/ScottyBsLEDpics/digisign1design.png'
 const LandingPage = () => {
 
   return (
@@ -68,15 +68,16 @@ const LandingPage = () => {
                     Get Started
                   </Link>
                   <Link
-                    className="inline-flex h-10 items-center justify-center rounded-md border
-                      border-gray-200 bg-white px-8 text-sm font-medium shadow-sm 
-                     transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
-                      focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
-                       dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                    href="#"
-                  >
-                    Contact Us
-                  </Link>
+                  className="inline-flex h-10 items-center justify-center rounded-md border
+                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900  // Ensure text is dark for light mode
+                          transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
+                           focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
+                           dark:bg-gray-950 dark:text-gray-50  // Ensure text is light for dark mode
+                         dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                  href="#"
+                    >
+                      Contact Us
+                </Link>
                 </div>
               </div>
             </div>
@@ -142,15 +143,16 @@ const LandingPage = () => {
                     Get Started
                   </Link>
                   <Link
-                    className="inline-flex h-10 items-center justify-center rounded-md border
-                      border-gray-200 bg-white px-8 text-sm font-medium shadow-sm 
-                     transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
-                      focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
-                       dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                    href="#"
-                  >
-                    Contact Us
-                  </Link>
+                  className="inline-flex h-10 items-center justify-center rounded-md border
+                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900  // Ensure text is dark for light mode
+                          transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
+                           focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
+                           dark:bg-gray-950 dark:text-gray-50  // Ensure text is light for dark mode
+                         dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                  href="#"
+                    >
+                      Contact Us
+                </Link>
                 </div>
               </div>
             </div>
@@ -171,11 +173,9 @@ const LandingPage = () => {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
-                alt="PlaceHolderImage"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
-                height="310"
-                src="/placeholder.svg"
-                width="550"
+                alt="digiSign1"
+                className="mx-auto max-h-[700px] max-w-[800px] overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                src={digiSign1}
               />
               <div className="flex flex-col justify-center space-y-4">
                 <ul className="grid gap-6">
@@ -229,6 +229,29 @@ const LandingPage = () => {
                     </div>
                   </li>
                 </ul>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Link
+                    className="inline-flex h-10 items-center justify-center rounded-md 
+                    bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors 
+                    hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 
+                    disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900
+                     dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                    href="#"
+                  >
+                    Get Started
+                  </Link>
+                <Link
+                  className="inline-flex h-10 items-center justify-center rounded-md border
+                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900  // Ensure text is dark for light mode
+                          transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
+                           focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
+                           dark:bg-gray-950 dark:text-gray-50  // Ensure text is light for dark mode
+                         dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                  href="#"
+                    >
+                      Contact Us
+                </Link>
+                </div>
               </div>
             </div>
           </div>
