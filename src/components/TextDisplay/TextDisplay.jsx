@@ -8,7 +8,7 @@ const TextDisplay = ({ text, font, glowColor }) => {
     };
 
     const isRgbGlow = glowColor === "RGB";
-    const textDisplayClasses = `flex justify-center items-center ml-2 text-5xl max-h-[500px] max-w-[800px] mx-2.5 py-2 border-none rounded bg-gray-800 text-white overflow-hidden ${isRgbGlow && isGlowActive ? 'rgbGlowEffect' : ''}`;
+    const textDisplayClasses = `flex justify-center items-center ml-2 text-lg md:text-2xl lg:text-5xl h-[45vh] w-[80vw] mx-auto py-2 border-none rounded bg-gray-800 text-white overflow-auto ${isRgbGlow && isGlowActive ? 'rgbGlowEffect' : ''}`;
 
     const textDisplayStyle = {
         fontFamily: font,

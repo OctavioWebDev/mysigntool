@@ -10,8 +10,8 @@ const LandingPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <SBLEDSLogo className="h-10 w-10" />
+        <Link to="/" className="flex items-center justify-center" href="#">
+          <SBLEDSLogo to="/" className="h-10 w-10" />
           <span className="sr-only">Scotty B's LED's</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">

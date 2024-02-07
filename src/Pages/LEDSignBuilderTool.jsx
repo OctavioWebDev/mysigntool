@@ -11,6 +11,7 @@ import BackingTypeSelector from '../components/BackingTypeSelector/BackingTypeSe
 import LocationSelector from '../components/LocationSelector/LocationSelector';
 import Footer from '../components/Footer/Footer';
 import '../LEDSignToolStyles.css';
+import { ReactComponent as SBLEDSLogo } from '../assets/Logos/SBLEDSLogo.svg';
 
 function LEDSignBuilderTool() {
 const [textInput, setTextInput] = useState('');
@@ -61,8 +62,8 @@ const handleResetCustomSize = () => {
   return (
     <div className="LEDSignBuilderTool">
       <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <MountainIcon className="h-6 w-6" />
+        <Link to="/" className="flex items-center justify-center" href="#">
+          <SBLEDSLogo className="h-10 w-10" />
           <span className="sr-only">Scotty B's LED's</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
@@ -115,25 +116,6 @@ const handleResetCustomSize = () => {
       <Footer size={size} location={location} />
     </div>
   );
-}
-
-function MountainIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
-  )
 }
 
 export default LEDSignBuilderTool;
