@@ -13,12 +13,13 @@ import Footer from '../components/Footer/Footer';
 import '../LEDSignToolStyles.css';
 import { ReactComponent as SBLEDSLogo } from '../assets/Logos/SBLEDSLogo.svg';
 
-function LEDSignBuilderTool() {
+function LEDSignBuilderTool ({addToCart}) {
 const [textInput, setTextInput] = useState('');
 const [selectedFont, setSelectedFont] = useState('Arial');
 const [selectedColor, setSelectedColor] = useState('#2196f3'); // Default color
-
 const [size, setSize] = useState({ width: 0, height: 0 });
+const [tubeColor, setTubeColor] = useState('');
+const [backingType, setBackingType] = useState('acrylic');
 const [location, setLocation] = useState('inside'); // or 'outside'
 const [customSize, setCustomSize] = useState({ width: 0, height: 0 });
 
@@ -35,10 +36,12 @@ const colors = ["#FFD700","#ADD8E6", "#FF69B4", "#8F00FF", "#FFA500", "#FFC0CB",
 const handleColorSelect = (color) => {
     setSelectedColor(color)
 };
-const handleTubeColorSelect = (color) => {
 
-  console.log("Selected tube color: ", color);
+
+const handleTubeColorSelect = (color) => {
+  setTubeColor(color);
 };
+
 const handlePresetSizeSelect = (size) => {
   setSize(size);
   setCustomSize({ width: 0, height: 0 });
@@ -47,16 +50,18 @@ const handlePresetSizeSelect = (size) => {
 const handleCustomSizeChange = (size) => {
   setSize(size);
 };
-const handleBackingTypeSelect = (type) => {
 
-  console.log("Selected backing type: ", type);
+const handleBackingTypeSelect = (type) => {
+  setBackingType(type);
 };
+
 const handleLocationSelect = (location) => {
   setLocation(location);
 };
 
 const handleResetCustomSize = () => {
-  setCustomSize({ width: 0, height: 0 }); ///what this function is supposed to do is reset the sloder but it dosent
+  setCustomSize({ width: 0, height: 0 });
+
 };
 
   return (
@@ -97,7 +102,7 @@ const handleResetCustomSize = () => {
       <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
       
       <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Tube Color Matching</h1>
-      <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} />
+      <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} signColor={selectedColor} />
       
       <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Size</h1>
       <PresetSizeSelector onSelectSize={handlePresetSizeSelect} onResetCustomSize={handleResetCustomSize} />
@@ -113,7 +118,17 @@ const handleResetCustomSize = () => {
       <h3 className="relative top-0 left-5 mt-6 mb-6 text-white text-sm">Add 10% if location is 'outside'</h3>
       <LocationSelector onSelectLocation={handleLocationSelect}/>
       
-      <Footer size={size} location={location} />
+      <Footer 
+        textInput={textInput}
+        selectedFont={selectedFont}
+        selectedColor={selectedColor}
+        tubeColor={tubeColor}
+        size={size}
+        location={location}
+        customSize={customSize}
+        backingType={backingType}
+        addToCart={addToCart} // Pass this prop to the Footer
+      />
     </div>
   );
 }

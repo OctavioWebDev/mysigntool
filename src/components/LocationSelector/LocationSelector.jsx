@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
 const LocationSelector = ({ onSelectLocation }) => {
-    const [selectedLocation, setSelectedLocation] = useState('');
+    const [selectedLocation, setSelectedLocation] = useState('inside');
 
     const handleSelectLocation = (location) => {
         setSelectedLocation(location);
+        
         if (onSelectLocation) {
             onSelectLocation(location);
         }

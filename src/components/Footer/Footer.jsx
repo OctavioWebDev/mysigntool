@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AddToCartButton from '../AddToCart/AddToCartButton';
 
-const Footer = ({ textInput, selectedFont, selectedColor, size, location, customSize }) => {
+const Footer = ({ textInput, selectedFont, selectedColor, tubeColor, size, backingType, location, customSize, addToCart }) => {
     // Calculate the total size in square inches
     const totalSize = size.width * size.height;
 
@@ -16,18 +16,19 @@ const Footer = ({ textInput, selectedFont, selectedColor, size, location, custom
         cost += cost * 0.10;
     }
 
-    const [cart, setCart] = useState([]);
-
-    const addToCart = () => {
+    const handleAddToCart = () => {
         const selections = {
             textInput,
             selectedFont,
             selectedColor,
+            tubeColor,
             size,
+            backingType,
             location,
             customSize,
+            cost,
         };
-        setCart(prevCart => [...prevCart, selections]);
+        addToCart(selections); // Use the passed addToCart function here
     };
 
     return (
@@ -35,7 +36,7 @@ const Footer = ({ textInput, selectedFont, selectedColor, size, location, custom
             <div className="ml-1">
                 Total Cost: ${cost.toFixed(2)}
             </div>
-            <AddToCartButton addToCart={addToCart} selections={{ textInput, selectedFont, selectedColor, size, location, customSize }} />
+            <AddToCartButton addToCart={handleAddToCart} selections={{ textInput, selectedFont, selectedColor, tubeColor, size, backingType, location, customSize }} />
         </footer>
     );
 };

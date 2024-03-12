@@ -7,12 +7,15 @@ import LEDSignBuilderTool from './Pages/LEDSignBuilderTool';
 import Cart from './Pages/Cart';
 import Profile from './Pages/Profile';
 import reportWebVitals from './reportWebVitals';
+import BusinessToBusinessInquiryForm from './Pages/BusinessToBusinessInquiryForm';
+import CustomBusinessLogoForm from './Pages/CustomBusinessLogoForm';
+import WholesaleInquiryForm from './Pages/WholeSaleInquiryForm';
 
 const App = () => {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item) => {
-    setCart([...cart, item]);
+  const addToCart = (selection) => {
+    setCart([...cart, selection]);
   };
 
   const removeFromCart = (itemToRemove) => {
@@ -26,6 +29,9 @@ const App = () => {
         <Route path="/express-yourself" element={<LEDSignBuilderTool addToCart={addToCart} />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/business-inquiry" element={<BusinessToBusinessInquiryForm />} />
+        <Route path="/custom-logo" element={<CustomBusinessLogoForm />} />
+        <Route path="/wholesale-inquiry" element={<WholesaleInquiryForm />} />
       </Routes>
     </Router>
   );
