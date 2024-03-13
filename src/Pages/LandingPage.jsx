@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import promoVideo from '../assets/Videos/Scotty B\'s LED\'s Promo.mp4';
 import uncleJohns from '../assets/ScottyBsLEDpics/245398213_1300694530390420_8635895171047700084_n.jpeg';
 import digiSign1 from '../assets/ScottyBsLEDpics/digisign1design.png'
-import Header from '../components/Header/Header';
+import Header from '../components/Header';
 
 const LandingPage = () => {
 

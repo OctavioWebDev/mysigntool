@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Header from '../components/Header/Header';
+import Header from '../components/Header';
 const DigiSignInquiry = () => {
   // You can manage form state using useState hook
   const [formState, setFormState] = useState({

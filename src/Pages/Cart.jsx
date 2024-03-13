@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes for prop type validation
-import Header from '../components/Header/Header';
+import Header from '../components/Header';
 
 const Cart = ({ cart, removeFromCart }) => { // Receive cart and removeFromCart as props
   console.log("Cart items:", cart);

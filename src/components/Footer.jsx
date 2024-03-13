@@ -1,5 +1,5 @@
 import React from 'react';
-import AddToCartButton from '../AddToCart/AddToCartButton';
+import AddToCartButton from './AddToCartButton';
 
 const Footer = ({ textInput, selectedFont, selectedColor, tubeColor, size, backingType, location, customSize, addToCart }) => {
     // Calculate the total size in square inches

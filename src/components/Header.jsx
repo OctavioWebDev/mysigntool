@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ReactComponent as SBLEDSLogo } from '../../assets/Logos/SBLEDSLogo.svg';
+import { ReactComponent as SBLEDSLogo } from '../assets/Logos/SBLEDSLogo.svg';
 const Header = ({ logo }) => {
     return (
       <header className="px-4 lg:px-6 h-14 flex items-center">

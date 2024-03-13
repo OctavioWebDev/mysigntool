@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../index.css';
+import '../index.css';
 
 const TextDisplay = ({ text, font, glowColor }) => {
     const [isGlowActive, setIsGlowActive] = useState(false);
