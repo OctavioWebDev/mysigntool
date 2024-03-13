@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import BusinessToBusinessInquiryForm from './Pages/BusinessToBusinessInquiryForm';
 import CustomBusinessLogoForm from './Pages/CustomBusinessLogoForm';
 import WholesaleInquiryForm from './Pages/WholeSaleInquiryForm';
-
+import DigiSignInquiry from './Pages/DigiSignInquiry';
 const App = () => {
   const [cart, setCart] = useState([]);
 
@@ -32,6 +32,7 @@ const App = () => {
         <Route path="/business-inquiry" element={<BusinessToBusinessInquiryForm />} />
         <Route path="/custom-logo" element={<CustomBusinessLogoForm />} />
         <Route path="/wholesale-inquiry" element={<WholesaleInquiryForm />} />
+        <Route path="/digi-sign-inquiry" element={<DigiSignInquiry />} />
       </Routes>
     </Router>
   );
