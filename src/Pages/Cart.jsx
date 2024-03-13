@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes for prop type validation
 import Header from '../components/Header';
+import MainFooter from '../components/MainFooter';
 
 const Cart = ({ cart, removeFromCart }) => { // Receive cart and removeFromCart as props
   console.log("Cart items:", cart);
@@ -45,6 +46,7 @@ const Cart = ({ cart, removeFromCart }) => { // Receive cart and removeFromCart 
           ))
         )}
       </div>
+      <MainFooter />
     </div>
   );
 };

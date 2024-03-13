@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import MainFooter from '../components/MainFooter';
 const WholesaleInquiryForm = () => {
   // Add your form submission logic here
   const handleSubmit = (event) => {
@@ -37,6 +38,7 @@ const WholesaleInquiryForm = () => {
 
         <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">Submit</button>
       </form>
+      <MainFooter />
     </div>
   );
 };

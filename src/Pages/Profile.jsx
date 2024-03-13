@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import MainFooter from '../components/MainFooter';
 const Profile = () => {
   return (
     <div className="flex flex-col min-h-screen">
@@ -14,6 +15,7 @@ const Profile = () => {
             User Profile
         </h1>
     </div>
+    <MainFooter />
     </div>
   );
 };

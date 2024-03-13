@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
+import MainFooter from '../components/MainFooter';
 const CustomBusinessLogoForm = () => {
   // You can manage form state using useState hook
   const [formState, setFormState] = useState({
@@ -98,6 +99,7 @@ const CustomBusinessLogoForm = () => {
           GET A FREE QUOTE
         </button>
       </form>
+      <MainFooter />
     </div>
   );
 };

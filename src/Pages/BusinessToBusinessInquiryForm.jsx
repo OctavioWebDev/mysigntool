@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import MainFooter from '../components/MainFooter';
 
 const BusinessToBusinessInquiryForm = () => {
   const handleSubmit = (event) => {
@@ -66,6 +67,7 @@ const BusinessToBusinessInquiryForm = () => {
           SUBMIT
         </button>
       </form>
+      <MainFooter />
     </div>
   );
 };
