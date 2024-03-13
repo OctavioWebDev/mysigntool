@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import TextInput from '../components/TextInput/TextInput';
 import TextDisplay from '../components/TextDisplay/TextDisplay';
 import FontSelector from '../components/FontSelector/FontSelector';
