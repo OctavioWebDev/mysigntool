@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types'; // Import PropTypes for prop type validation
-import { ReactComponent as SBLEDSLogo } from '../assets/Logos/SBLEDSLogo.svg';
+import Header from '../components/Header/Header';
 
 const Cart = ({ cart, removeFromCart }) => { // Receive cart and removeFromCart as props
   console.log("Cart items:", cart);
@@ -9,29 +8,7 @@ const Cart = ({ cart, removeFromCart }) => { // Receive cart and removeFromCart 
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link to="/" className="flex items-center justify-center">
-          <SBLEDSLogo className="h-10 w-10" />
-          <span className="sr-only">Scotty B's LED's</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link to="/express-yourself" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Express YourSelf
-          </Link>
-          <Link to="" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            About
-          </Link>
-          <Link to="/profile" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Profile
-          </Link>
-          <Link to="" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Contact
-          </Link>
-          <Link to="/cart" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Cart
-          </Link>
-        </nav>
-      </header>
+      <Header />
       <div className="max-w-2xl mx-auto p-5">
         {cart.length === 0 ? (
           <p className="mt-24 text-sm text-gray-300">Your cart is empty.</p>

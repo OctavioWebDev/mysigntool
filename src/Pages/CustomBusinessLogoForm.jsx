@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Header from '../components/Header/Header';
 const CustomBusinessLogoForm = () => {
   // You can manage form state using useState hook
   const [formState, setFormState] = useState({
@@ -29,6 +29,7 @@ const CustomBusinessLogoForm = () => {
 
   return (
     <div className="container mx-auto p-4">
+        <Header />
       <h2 className="text-2xl font-bold mb-4">GET A FREE QUOTE</h2>
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-4">

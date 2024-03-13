@@ -3,35 +3,13 @@ import { Link } from 'react-router-dom';
 import promoVideo from '../assets/Videos/Scotty B\'s LED\'s Promo.mp4';
 import uncleJohns from '../assets/ScottyBsLEDpics/245398213_1300694530390420_8635895171047700084_n.jpeg';
 import digiSign1 from '../assets/ScottyBsLEDpics/digisign1design.png'
-import { ReactComponent as SBLEDSLogo } from '../assets/Logos/SBLEDSLogo.svg';
+import Header from '../components/Header/Header';
 
 const LandingPage = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link to="/" className="flex items-center justify-center" href="#">
-          <SBLEDSLogo to="/" className="h-10 w-10" />
-          <span className="sr-only">Scotty B's LED's</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link to="/express-yourself" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Express YourSelf
-          </Link>
-          <Link to="" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            About
-          </Link>
-          <Link to="/profile" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Profile
-          </Link>
-          <Link to="" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Contact
-          </Link>
-          <Link to="/cart" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Cart
-          </Link>
-        </nav>
-      </header>
+      <Header />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Header from '../components/Header/Header';
 const WholesaleInquiryForm = () => {
   // Add your form submission logic here
   const handleSubmit = (event) => {
@@ -9,8 +9,9 @@ const WholesaleInquiryForm = () => {
 
   return (
     <div className="container mx-auto p-4">
+        <Header />
       <h2 className="text-2xl font-bold mb-4">WHOLESALE INQUIRIES</h2>
-      <p className="mb-4">We offer our LED neon signs to shops looking to resell. Please fill out this form to become a reseller and we will be in touch.</p>
+      <p className="mb-4">We offer our LED signs to shops looking to resell. Please fill out this form to become a reseller and we will be in touch.</p>
       <p className="mb-4">For interior designers, architects, and event planners, you can join our trade program to get exclusive benefits and discounts.</p>
       <p className="mb-4 font-semibold">We look forward to working with you!</p>
 

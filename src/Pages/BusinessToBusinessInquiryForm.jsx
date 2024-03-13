@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/Header/Header';
 
 const BusinessToBusinessInquiryForm = () => {
   const handleSubmit = (event) => {
@@ -8,6 +9,7 @@ const BusinessToBusinessInquiryForm = () => {
 
   return (
     <div className="container mx-auto p-4">
+        <Header />
       <h2 className="text-2xl font-bold mb-4">Business to Business Inquiry</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-4">

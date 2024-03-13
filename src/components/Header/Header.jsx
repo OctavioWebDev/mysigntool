@@ -1,23 +1,31 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import { ReactComponent as SBLEDSLogo } from '../../assets/Logos/SBLEDSLogo.svg';
 const Header = ({ logo }) => {
     return (
-        <header className="flex justify-between items-center bg-black text-white py-7 px-7 fixed top-0 w-full z-50">
-            <div className="flex items-center">
-                <div className="hamburger cursor-pointer mr-5 text-2xl">☰</div>
-                <nav>
-                    <ul className="list-none flex m-0 p-0">
-                        <li className="mr-5"><a href="/">Home</a></li>
-                        <li className="mr-5"><a href="/express-yourself">Express Yourself</a></li>
-                        <li className="mr-5"><a href="/profile">Profile</a></li>
-                        <li><a href="/cart">Cart</a></li>             
-                    </ul>
-                </nav>
-            </div>
-            <div className="logo">
-                {logo}
-            </div>
-        </header>
+      <header className="px-4 lg:px-6 h-14 flex items-center">
+        <Link to="/" className="flex items-center justify-center" href="#">
+          <SBLEDSLogo to="/" className="h-10 w-10" />
+          <span className="sr-only">Scotty B's LED's</span>
+        </Link>
+        <nav className="ml-auto flex gap-4 sm:gap-6">
+          <Link to="/express-yourself" className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            Express YourSelf
+          </Link>
+          <Link to="" className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            About
+          </Link>
+          <Link to="/profile" className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            Profile
+          </Link>
+          <Link to="" className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            Contact
+          </Link>
+          <Link to="/cart" className="text-sm font-medium hover:underline underline-offset-4" href="#">
+            Cart
+          </Link>
+        </nav>
+      </header>
     );
 };
 
