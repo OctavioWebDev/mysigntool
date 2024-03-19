@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const TubeColorMatcher = ({ onSelectTubeColor, signColor }) => {
     const [selectedTubeColor, setSelectedTubeColor] = useState('white');
+    const inputId = "textInput";
 
     const handleSelectTubeColor = (color) => {
         // If "match" is selected, use the signColor, otherwise use the selected color directly
@@ -13,9 +14,13 @@ const TubeColorMatcher = ({ onSelectTubeColor, signColor }) => {
     };
 
     return (
-        <div className="flex justify-center mb-5">
+        <div className="mt-6 ml-2 mx-2.5">
+            <label htmlFor={inputId} className="block text-white text-lg mb-2">
+                Your Tube Color
+            </label>
+        <div className="flex max-w-lg justify-center overflow-x-auto whitespace-wrap">
             <button
-                className={`px-5 py-2.5 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                className={`px-6 py-3 mx-2 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
                     selectedTubeColor === 'white' ? 'bg-purple-700 border-purple-700 text-white' : 'bg-transparent text-white hover:bg-purple-600'
                 } w-92`}
                 onClick={() => handleSelectTubeColor('white')}
@@ -23,13 +28,14 @@ const TubeColorMatcher = ({ onSelectTubeColor, signColor }) => {
                 White Tube
             </button>
             <button
-                className={`px-5 py-2.5 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                className={`px-6 py-3 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
                     selectedTubeColor === signColor ? 'bg-purple-700 border-purple-700 text-white' : 'bg-transparent text-white hover:bg-purple-600'
                 } w-92`}
                 onClick={() => handleSelectTubeColor('colorMatching')}
             >
                 Color Matching
             </button>
+        </div>
         </div>
     );
 };

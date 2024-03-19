@@ -1,33 +1,53 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCartPlus,
+  faUser,
+  faAddressCard,
+  faImage,
+  faAddressBook,
+  faHouse
+} from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as SBLEDSLogo } from '../assets/Logos/SBLEDSLogo.svg';
-const Header = ({ logo }) => {
-    return (
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link to="/" className="flex items-center justify-center" href="#">
-          <SBLEDSLogo to="/" className="h-10 w-10" />
-          <span className="sr-only">Scotty B's LED's</span>
+
+const Header = () => {
+  return (
+    <header className="px-4 lg:px-6 h-14 flex items-center">
+      <Link to="/" className="flex items-center justify-center">
+        <SBLEDSLogo className="h-10 w-10" />
+        <span className="sr-only">Scotty B's LED's</span>
+      </Link>
+      <nav className="ml-auto flex gap-4 sm:gap-8">
+      <Link to="/" className="hover:underline underline-offset-4">
+        <FontAwesomeIcon icon={faHouse} size="xl"/>
+          <span className="sr-only">Home</span>
         </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link to="/express-yourself" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Express YourSelf
-          </Link>
-          <Link to="" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            About
-          </Link>
-          <Link to="/profile" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Profile
-          </Link>
-          <Link to="" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Contact
-          </Link>
-          <Link to="/cart" className="text-sm font-medium hover:underline underline-offset-4" href="#">
-            Cart
-          </Link>
-        </nav>
-      </header>
-    );
+        <Link to="/express-yourself" className="hover:underline underline-offset-4">
+          <FontAwesomeIcon icon={faImage} size="xl" />
+          <span className="sr-only">Express Yourself</span>
+        </Link>
+        <Link to="/about" className="hover:underline underline-offset-4">
+          <FontAwesomeIcon icon={faAddressCard} size="xl"/>
+          <span className="sr-only">About</span>
+        </Link>
+        <Link to="/profile" className="hover:underline underline-offset-4">
+          <FontAwesomeIcon icon={faUser} size="xl"/>
+          <span className="sr-only">Profile</span>
+        </Link>
+        <Link to="/contact" className="hover:underline underline-offset-4">
+          <FontAwesomeIcon icon={faAddressBook} size="xl"/>
+          <span className="sr-only">Contact</span>
+        </Link>
+        <Link to="/cart" className="hover:underline underline-offset-4">
+          <FontAwesomeIcon icon={faCartPlus} size="xl"/>
+          <span className="sr-only">Cart</span>
+        </Link>
+      </nav>
+    </header>
+  );
 };
 
 export default Header;
+
 

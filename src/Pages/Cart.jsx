@@ -15,7 +15,7 @@ const Cart = ({ cart, removeFromCart }) => { // Receive cart and removeFromCart 
           <p className="mt-24 text-sm text-gray-300">Your cart is empty.</p>
         ) : (
           cart.map(( item, index) => (
-            <div key={index} className="border border-gray-300 p-4 mb-5 rounded bg-gray-200">
+            <div key={index} className="border border-gray-300 p-4 mb-5 rounded">
               <div className="mb-2.5">
               <h2 className="text-lg font-bold">Sign Specifications</h2>
               <ul>
@@ -37,7 +37,7 @@ const Cart = ({ cart, removeFromCart }) => { // Receive cart and removeFromCart 
               </ul>
             </div>
               <button 
-                className="px-5 py-2 bg-red-600 text-white rounded cursor-pointer hover:bg-red-700" 
+                className="px-5 py-2 bg-purple-600 text-white rounded cursor-pointer hover:bg-purple-700" 
                 onClick={() => removeFromCart(item)}
               >
                 Remove

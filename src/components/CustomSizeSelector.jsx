@@ -22,19 +22,16 @@ const CustomSizeSelector = ({ onSizeChange }) => {
 
     return (
         <div className="customSizeSelector">
-            <div className="customSizeSelectorBox">
+            <div className="customSizeSelectorBox ">
             <label 
                 for="medium-range" 
                 class="block
-                w-full
-                ml-4 
                 mb-2 
-                text-sm 
+                text-lg 
                 font-medium
-                border
                  text-gray-900
                   dark:text-white"
-                  >
+                  > Custom Size
             </label>
                 <input 
                     id="medium-range" 
@@ -43,11 +40,9 @@ const CustomSizeSelector = ({ onSizeChange }) => {
                     max="118"
                     value={size.width}
                     onChange={(e) => handleSizeChange(parseInt(e.target.value))} 
-                    class="w-full 
-                    h-3 
-                    ml-4
-                    mx-5
-                    border
+                    class="w-full
+                    h-2 
+                    mb-3
                      bg-gray-200 
                      rounded-lg 
                      appearance-none 

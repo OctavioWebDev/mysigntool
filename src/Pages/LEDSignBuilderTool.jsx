@@ -66,35 +66,23 @@ const handleResetCustomSize = () => {
   return (
     <div className="LEDSignBuilderTool">
       <Header />
-      <h1 className="absoulte ml-2 mt-6 mb-6 text-white text-2xl">Express Your-Self</h1>
-      <TextDisplay font={selectedFont} text={textInput} glowColor={selectedColor} />
-      
-      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Text Input</h1>
-      <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
-      
-      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Font Selector</h1>
-      <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
-      
-      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Color Selector</h1>
-      <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
-      
-      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Tube Color Matching</h1>
-      <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} signColor={selectedColor} />
-      
-      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Size</h1>
-      <PresetSizeSelector onSelectSize={handlePresetSizeSelect} onResetCustomSize={handleResetCustomSize} />
-      
-      <h2 className="relative top-1 left-5 mt-6 mb-6 text-white text-xl">Custom Size</h2>
-      <CustomSizeSelector onSizeChange={handleCustomSizeChange} />
-      
-      <h1 className="relative top-0 left-5 mt-6 mb-6 text-white text-2xl">Backing Type</h1>
-      <h3 className="relative top-0 left-5 mt-6 mb-6 text-white text-sm">Choose which type of backing</h3>
-      <BackingTypeSelector onSelectBackingType={handleBackingTypeSelect} />
-      
-      <h1 className="relative top-1 left-5 mt-6 mb-6 text-white text-2xl">Location</h1>
-      <h3 className="relative top-0 left-5 mt-6 mb-6 text-white text-sm">Add 10% if location is 'outside'</h3>
-      <LocationSelector onSelectLocation={handleLocationSelect}/>
-      
+      {/* Flex container for the TextDisplay and control panels */}
+      <div className="flex flex-col md:flex-row justify-between items-start mb-6">
+        <TextDisplay font={selectedFont} text={textInput} glowColor={selectedColor} />
+        
+        {/* Control panels container */}
+        <div className="flex flex-col ml-3 gap-x-2 gap-y-2 w-full md:w-auto">
+          <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
+          <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
+          <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
+          <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} signColor={selectedColor} />
+          <PresetSizeSelector onSelectSize={handlePresetSizeSelect} onResetCustomSize={handleResetCustomSize} />
+          <CustomSizeSelector onSizeChange={handleCustomSizeChange} />
+          <BackingTypeSelector onSelectBackingType={handleBackingTypeSelect} />
+          <LocationSelector onSelectLocation={handleLocationSelect} />
+        </div>
+      </div>
+
       <Footer 
         textInput={textInput}
         selectedFont={selectedFont}
@@ -104,7 +92,7 @@ const handleResetCustomSize = () => {
         location={location}
         customSize={customSize}
         backingType={backingType}
-        addToCart={addToCart} // Pass this prop to the Footer
+        addToCart={addToCart}
       />
     </div>
   );
