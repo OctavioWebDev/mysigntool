@@ -1,0 +1,16 @@
+const fetchUserProfile = async (token) => {
+  const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/profile`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`, // Assuming you're using Bearer token authentication
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error('Could not fetch user profile.');
+  }
+
+  return await response.json();
+};
+

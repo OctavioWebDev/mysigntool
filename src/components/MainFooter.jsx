@@ -14,7 +14,7 @@ const MainFooter = () => {
   return (
     <footer className="flex flex-col w-full shrink-0 items-center px-4 md:px-6">
       <div className="flex flex-wrap justify-between w-full items-start gap-2 sm:gap-6 py-6 border-b border-gray-400">
-      <div>
+        <div>
           <img className="h-10 w-10" src={SBLEDSLogo} alt="SB LEDS Logo" />
           <p className="font-bold">Scotty B's LED's</p>
           <p>4455 Secor Road</p>
@@ -25,38 +25,38 @@ const MainFooter = () => {
 
         <div className="flex flex-wrap gap-x-12 gap-y-9 mt-6 sm:justify-center">
           <div className="w-full sm:w-1/2 md:w-1/4">
-            <h5 className="font-bold mb-3">Account</h5>
+            {/* <h5 className="font-bold mb-3">Account</h5>
             <p>Orders</p>
-            <p>Track your order</p>
+            <p>Track your order</p> */}
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4">
             <h5 className="font-bold mb-3">Professional</h5>
-            <p>B2B</p>
-            <p>Whole Sale</p>
-            <p>Custom Business Logo</p>
-            <p>Digital Sign</p>
-            <h5 className="font-bold mt-5">Gift Card</h5>
+            {/* <p>B2B</p> */}
+            {/* <p>Whole Sale</p> */}
+            <p><a href="http://localhost:3000/custom-logo" class="hover:underline">Custom Business Logo</a></p>
+            <p><a href="http://localhost:3000/digi-sign-inquiry" class="hover:underline">Digital Sign</a></p>
+            {/* <h5 className="font-bold mt-5">Gift Card</h5> */}
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4">
             <h5 className="font-bold mb-3">Help</h5>
-            <p>FAQ</p>
-            <p>Shipping</p>
-            <p>Returns</p>
-            <p>Contact</p>
-            <p>Refund Policy</p>
-            <p>Privacy Policy</p>
-            <p>Terms & Conditions</p>
+            {/* <p><a href="http://localhost:3000/faq" class="hover:underline">FAQ</a></p> */}
+            <p><a href="http://localhost:3000/shipping" class="hover:underline">Shipping Policy</a></p>
+            <p><a href="http://localhost:3000/returns" class="hover:underline">Return Policy</a></p>
+            <p><a href="http://localhost:3000/contact" class="hover:underline">Contact</a></p>
+            <p><a href="http://localhost:3000/refund" class="hover:underline">Refund Policy</a></p>
+            <p><a href="http://localhost:3000/privacy" class="hover:underline">Privacy Policy</a></p>
+            <p><a href="http://localhost:3000/terms" class="hover:underline">Terms & Conditions</a></p>
           </div>
-          </div>
-          {/* Follow Us */}
-          <div className="w-full sm:w-1/2 md:w-1/4">
-            <h5 className="font-bold mb-3">Follow us</h5>
-            <div className="flex justify-start space-x-4">
-              <FontAwesomeIcon icon={faTwitter} className="text-xl" />
-              <FontAwesomeIcon icon={faInstagram} className="text-xl" />
-              <FontAwesomeIcon icon={faPinterest} className="text-xl" />
-              <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
-              <FontAwesomeIcon icon={faYoutube} className="text-xl" />
+        </div>
+        {/* Follow Us */}
+        <div className="w-full sm:w-1/2 md:w-1/4">
+          <h5 className="font-bold mb-3">Follow us</h5>
+          <div className="flex justify-start space-x-4">
+            <FontAwesomeIcon icon={faTwitter} className="text-xl" />
+            <FontAwesomeIcon icon={faInstagram} className="text-xl" />
+            <FontAwesomeIcon icon={faPinterest} className="text-xl" />
+            <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
+            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
           </div>
         </div>
       </div>
