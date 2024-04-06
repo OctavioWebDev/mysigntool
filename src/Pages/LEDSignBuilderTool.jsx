@@ -68,10 +68,17 @@ const handleResetCustomSize = () => {
       <Header />
       {/* Flex container for the TextDisplay and control panels */}
       <div className="flex flex-col md:flex-row justify-between items-start mb-6">
-        <TextDisplay font={selectedFont} text={textInput} glowColor={selectedColor} />
+      <div className="w-full lg:w-auto flex-shrink lg:flex-shrink-0 fixed top-[height-of-header] left-0 right-0 lg:static">
+        <TextDisplay 
+          font={selectedFont} 
+          text={textInput} 
+          glowColor={selectedColor}
+          // More props and styling as required
+        />
+      </div>
         
         {/* Control panels container */}
-        <div className="flex flex-col ml-3 gap-x-2 gap-y-2 w-full md:w-auto">
+        <div className="mt-[calc(height-of-header+height-of-text-display)] lg:mt-12 w-full lg:w-auto lg:mr-6 overflow-auto overscroll-none lg:h-[calc(100vh-height-of-header)]">
           <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
           <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
           <ColorSelector colors={colors} onSelectColor={handleColorSelect} />

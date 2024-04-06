@@ -29,7 +29,7 @@ const LandingPage = () => {
               </video>
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-blue-700">
                     Welcome Scotty B's LEDs, where your brightest ideas shine in LED!
                   </h1>
                   <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -252,7 +252,7 @@ const LandingPage = () => {
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
                 Boost your brand's visibility with a striking LED sign.
               </h2>
-              <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              <p className="mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 No matter your idea, we're here to bring it to LED life
               </p>
             </div>

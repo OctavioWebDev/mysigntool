@@ -9,7 +9,7 @@ const TextDisplay = ({ text, font, glowColor }) => {
     };
 
     const isRgbGlow = glowColor === "RGB";
-    const textDisplayClasses = `flex ml-3 mt-7 justify-center items-center text-xl min-h-[75vh] min-w-[60vw] py-2 border-none rounded bg-gray-800 text-white overflow-auto ${isRgbGlow && isGlowActive ? 'rgb-glow' : ''}`;
+    const textDisplayClasses = ` ${isRgbGlow && isGlowActive ? 'rgb-glow' : ''}`;
 
     const textDisplayStyle = {
         fontFamily: font,
@@ -18,19 +18,23 @@ const TextDisplay = ({ text, font, glowColor }) => {
     };
 
     return (
-        <div className="relative">
-            <div 
-                className={textDisplayClasses} 
-                style={textDisplayStyle}
-                >
-                {text}
-            </div>
-            <label className="absolute bottom-2 left-3 mb-4 ml-7 inline-flex items-center cursor-pointer">
-                <input type="checkbox" onChange={handleGlowToggle} className="sr-only peer" />
-                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-                <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Git Lit</span>
-            </label>
-        </div>
+        <div className="fixed ml-9 mt-20 flex flex-col justify-center items-center text-6xl min-h-[50vh] min-w-[50vw] border-none rounded bg-gray-800 text-white ">
+  {/* <!-- Text Display Container --> */}
+  <div 
+      className={textDisplayClasses} 
+      style={textDisplayStyle}>
+      {text}
+  </div>
+  
+  {/* <!-- Switch: Positioned at the bottom left -->
+  <!-- Adjust "bottom-0 left-0 mb-4 ml-4" to fine-tune the position as needed --> */}
+  <label className="absolute bottom-0 left-0 mb-4 ml-4 inline-flex cursor-pointer">
+      <input type="checkbox" onChange={handleGlowToggle} className="sr-only peer" />
+      <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+      <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Git Lit</span>
+  </label>
+</div>
+
     );
 };
 
