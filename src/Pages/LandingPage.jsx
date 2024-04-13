@@ -12,7 +12,7 @@ const LandingPage = () => {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full mt-6 py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <video
@@ -25,7 +25,6 @@ const LandingPage = () => {
                 loop
               >
                 <source src={promoVideo} type="video/mp4" />
-                Your browser does not support the video tag.
               </video>
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -47,17 +46,17 @@ const LandingPage = () => {
                     hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 
                     disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900
                      dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    to='/express-yourself'
-                    href="http://localhost:3000/express-yourself"
+                    to='/custom-logo'
+                    href="http://localhost:3000/contact"
                   >
                     Get Started
                   </Link>
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md border
-                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900  // Ensure text is dark for light mode
+                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900  
                           transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
                            focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
-                           dark:bg-gray-950 dark:text-gray-50  // Ensure text is light for dark mode
+                           dark:bg-gray-950 dark:text-gray-50 
                          dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                          to="/contact"
                     href="http://localhost:3000/contact"
@@ -73,11 +72,11 @@ const LandingPage = () => {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                <div className="inline-block rounded-lg dark:text-gray-400 bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
                   Why Scotty B's LEDs?
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Skilled Craftsmanship.  Prompt Delivery.</h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-blue-700">Skilled Craftsmanship.  Prompt Delivery.</h2>
+                <p className="max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   Our team's expertise in LED artistry guarantees that each sign is a piece of illuminated perfection.  We value your time,
                   ensuring swift and reliable delivery of your LED sign.
                 </p>
@@ -131,10 +130,10 @@ const LandingPage = () => {
                     </Link>
                     <Link
                       className="inline-flex h-10 items-center justify-center rounded-md border
-                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900  // Ensure text is dark for light mode
+                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900 
                           transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
                            focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
-                           dark:bg-gray-950 dark:text-gray-50  // Ensure text is light for dark mode
+                           dark:bg-gray-950 dark:text-gray-50 
                          dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                          to="/contact"
                       href="http://localhost:3000/contact"
@@ -151,7 +150,7 @@ const LandingPage = () => {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Transform Your Space with Dynamic Digital Signs</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-blue-700">Transform Your Space with Dynamic Digital Signs</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                   At Scotty B's LEDs, we're not just about illuminating your world with bespoke LED creations; we're also at the forefront
                   of bringing cutting-edge digital signage solutions to businesses and homes alike. Our digital signs offer an innovative
@@ -162,7 +161,7 @@ const LandingPage = () => {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
                 alt="digiSign1"
-                className="mx-auto max-h-[700px] max-w-[800px] overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                className="mx-auto max-h-[500px] max-w-[800px] overflow-hidden rounded-xl object-cover object-center lg:w-1/2"
                 src={digiSign1}
               />
               <div className="flex flex-col justify-center space-y-4">
@@ -224,17 +223,17 @@ const LandingPage = () => {
                     hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 
                     disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900
                      dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                    to='/digi-sign-inquiry'
-                    href="http://localhost:3000/digi-sign-inquiry"
+                    to='/custom-logo'
+                    href="http://localhost:3000/custom-logo"
                   >
                     Get Started
                   </Link>
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md border
-                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900  // Ensure text is dark for light mode
+                           border-gray-200 bg-white px-8 text-sm font-medium shadow-sm text-gray-900 
                           transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1
                            focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800
-                           dark:bg-gray-950 dark:text-gray-50  // Ensure text is light for dark mode
+                           dark:bg-gray-950 dark:text-gray-50  
                          dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                          to="/contact"
                     href="http://localhost:3000/contact"
@@ -249,7 +248,7 @@ const LandingPage = () => {
         <section className="w-full bg-gray-800 py-12 md:py-24 lg:py-32 border-t">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-blue-700">
                 Boost your brand's visibility with a striking LED sign.
               </h2>
               <p className="mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">

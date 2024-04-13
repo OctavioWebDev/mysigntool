@@ -4,7 +4,6 @@ import {
   faTwitter,
   faInstagram,
   faPinterest,
-  faLinkedin,
   faYoutube,
   // Add other icons from FontAwesome as needed
 } from '@fortawesome/free-brands-svg-icons';
@@ -34,7 +33,7 @@ const MainFooter = () => {
             {/* <p>B2B</p> */}
             {/* <p>Whole Sale</p> */}
             <p><a href="http://localhost:3000/custom-logo" class="hover:underline">Custom Business Logo</a></p>
-            <p><a href="http://localhost:3000/digi-sign-inquiry" class="hover:underline">Digital Sign</a></p>
+            <p><a href="http://localhost:3000/custom-logo" class="hover:underline">Digital Sign</a></p>
             {/* <h5 className="font-bold mt-5">Gift Card</h5> */}
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4">
@@ -55,7 +54,6 @@ const MainFooter = () => {
             <FontAwesomeIcon icon={faTwitter} className="text-xl" />
             <FontAwesomeIcon icon={faInstagram} className="text-xl" />
             <FontAwesomeIcon icon={faPinterest} className="text-xl" />
-            <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
             <FontAwesomeIcon icon={faYoutube} className="text-xl" />
           </div>
         </div>

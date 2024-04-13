@@ -5,7 +5,7 @@ import MainFooter from '../components/MainFooter';
 const RefundPolicy = () => (
   <div className="flex flex-col min-h-screen">
     <Header />
-  <div className="space-y-4 text-sm max-w-4xl mx-auto px-4">
+  <div className="space-y-4 mt-16 text-sm max-w-4xl mx-auto px-4">
     <h2 className="text-lg font-bold text-center">Refund Policy</h2>
     
     <p className="text-center">At Scotty B's LED's (SBLED(s)), we take pride in the quality and craftsmanship of our products. Our refund policy outlines conditions under which refunds may or may not be granted.</p>

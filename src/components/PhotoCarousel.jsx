@@ -1,23 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-// Dummy images array, replace with your actual images
-const images = [
-  '/docs/images/carousel/carousel-1.svg',
-  '/docs/images/carousel/carousel-2.svg',
-  '/docs/images/carousel/carousel-3.svg',
-  '/docs/images/carousel/carousel-4.svg',
-  '/docs/images/carousel/carousel-5.svg',
-];
+import image1 from '../assets/ScottyBsLEDpics/397174942_755909426551365_5093732429376647298_n.jpeg';
+import image2 from '../assets/ScottyBsLEDpics/347252399_609176484305702_8775168318958265041_n.jpeg';
+import image3 from '../assets/ScottyBsLEDpics/347245646_670650481743927_8636533554187780558_n.jpeg';
+import image4 from '../assets/ScottyBsLEDpics/275062851_1391287971331075_4071023154152937358_n.jpeg';
+import image5 from '../assets/ScottyBsLEDpics/274942194_1389449628181576_6460728541483282972_n.jpeg';
+// import image6 from '../assets/ScottyBsLEDpics/263577144_1334111783715361_3815705391545149683_n.jpeg';
+// import image7 from '../assets/ScottyBsLEDpics/263073187_1334129233713616_6661931121996565812_n.jpeg';
+// import image8 from '../assets/ScottyBsLEDpics/257306399_1322592651533941_8966301292416175716_n.jpeg';
+import image9 from '../assets/ScottyBsLEDpics/257124754_1322630461530160_147332498102588651_n.jpeg';
+
+const images = [image1, image2, image3, image4, image5, image9];
 
 const PhotoCarousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Go to next slide
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
+    }, 3000); // Change the current image every 3 seconds
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(timer);
+  }, []);
+
   const nextSlide = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // Go to previous slide
   const prevSlide = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
@@ -28,45 +38,32 @@ const PhotoCarousel = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`duration-700 ease-in-out ${index === currentImageIndex ? 'block' : 'hidden'}`}
+            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-linear ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
             data-carousel-item
           >
-            <img src={image} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt={`Slide ${index + 1}`} />
+            <img src={image} className="w-full h-full object-cover object-center" alt={`Slide ${index + 1}`} />
           </div>
         ))}
       </div>
-      
+
       <button
         type="button"
         className="absolute top-0 start-0 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         data-carousel-prev
         onClick={prevSlide}
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          {/* SVG for Previous button */}
-          <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
-          </svg>
-          <span className="sr-only">Previous</span>
-        </span>
       </button>
-      
+
       <button
         type="button"
         className="absolute top-0 end-0 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
         data-carousel-next
         onClick={nextSlide}
       >
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          {/* SVG for Next button */}
-          <svg className="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-          </svg>
-          <span className="sr-only">Next</span>
-        </span>
       </button>
     </div>
   );
 };
 
 export default PhotoCarousel;
+

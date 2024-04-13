@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCartPlus,
-  faUser,
+  // faCartPlus,
+  // faUser,
   faAddressCard,
-  faImage,
+  // faImage,
   faAddressBook,
   faHouse
 } from '@fortawesome/free-solid-svg-icons';
@@ -25,26 +25,26 @@ const Header = () => {
         <FontAwesomeIcon icon={faHouse} size="xl" className='fill-current text-purple-600 hover:text-purple-700' />
           <span className="sr-only">Home</span>
         </Link>
-        <Link to="/express-yourself" className="hover:underline underline-offset-4">
+        {/* <Link to="/express-yourself" className="hover:underline underline-offset-4">
           <FontAwesomeIcon icon={faImage} size="xl" className='fill-current text-purple-600 hover:text-purple-700' />
           <span className="sr-only">Express Yourself</span>
-        </Link>
+        </Link> */}
         <Link to="/aboutus" className="hover:underline underline-offset-4">
           <FontAwesomeIcon icon={faAddressCard} size="xl" className='fill-current text-purple-600 hover:text-purple-700'/>
           <span className="sr-only">About Us</span>
         </Link>
-        <Link to="/profile" className="hover:underline underline-offset-4">
+        {/* <Link to="/profile" className="hover:underline underline-offset-4">
           <FontAwesomeIcon icon={faUser} size="xl" className='fill-current text-purple-600 hover:text-purple-700'/>
           <span className="sr-only">Profile</span>
-        </Link>
+        </Link> */}
         <Link to="/contact" className="hover:underline underline-offset-4">
           <FontAwesomeIcon icon={faAddressBook} size="xl" className='fill-current text-purple-600 hover:text-purple-700'/>
           <span className="sr-only">Contact</span>
         </Link>
-        <Link to="/cart" className="hover:underline underline-offset-4">
+        {/* <Link to="/cart" className="hover:underline underline-offset-4">
           <FontAwesomeIcon icon={faCartPlus} size="xl" className='fill-current text-purple-600 hover:text-purple-700'/>
           <span className="sr-only">Cart</span>
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );

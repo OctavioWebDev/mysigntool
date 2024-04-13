@@ -6,7 +6,7 @@ import MainFooter from '../components/MainFooter';
 const PrivacyPolicy = () => (
   <div className="flex flex-col min-h-screen">
     <Header />
-    <div className="flex justify-center items-center min-h-screen px-4">
+    <div className="flex justify-center items-center mt-16 min-h-screen px-4">
       <div className="space-y-4 text-sm max-w-4xl">
         <h2 className="text-lg font-bold text-center">Privacy Policy</h2>
         <p className="text-center">This Privacy Policy is a commitment from 

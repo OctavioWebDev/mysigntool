@@ -40,8 +40,21 @@ const CustomerTestimonials = () => {
             <footer className="blockquote-footer">{testimonial.author}</footer>
           </blockquote>
         ))}
-        <button onClick={prevTestimonial} className="absolute left-0 top-1/2 transform -translate-y-1/2">Prev</button>
-        <button onClick={nextTestimonial} className="absolute right-0 top-1/2 transform -translate-y-1/2">Next</button>
+        <button
+        type="button"
+        className="absolute top-0 start-0 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+        onClick={prevTestimonial}
+      >
+      </button>
+
+      <button
+        type="button"
+        className="absolute top-0 end-0 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+        onClick={nextTestimonial}
+      >
+      </button>
       </div>
     </div>
   );
