@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react'; //add useState when needed for the cart and other components
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Removed Switch
 import './index.css';
 import LandingPage from './Pages/LandingPage';
-import LEDSignBuilderTool from './Pages/LEDSignBuilderTool';
+// import LEDSignBuilderTool from './Pages/LEDSignBuilderTool';
 // import Cart from './Pages/Cart';
 // import Profile from './Pages/Profile';
 import reportWebVitals from './reportWebVitals';
@@ -24,15 +24,15 @@ import AboutUs from './Pages/AboutUs';
 
 
 const App = () => {
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
 
-  const addToCart = (selection) => {
-    setCart([...cart, selection]);
-  };
+  // const addToCart = (selection) => {
+  //   setCart([...cart, selection]);
+  // };
 
-  const removeFromCart = (itemToRemove) => {
-    setCart(cart.filter((item) => item !== itemToRemove));
-  };
+  // const removeFromCart = (itemToRemove) => {
+  //   setCart(cart.filter((item) => item !== itemToRemove));
+  // };
 
   return (
     <Router>

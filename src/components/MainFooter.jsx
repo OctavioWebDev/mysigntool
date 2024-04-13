@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faTwitter,
+  faFacebookF,
   faInstagram,
-  faPinterest,
+  // faPinterest,
   faYoutube,
   // Add other icons from FontAwesome as needed
 } from '@fortawesome/free-brands-svg-icons';
@@ -51,11 +51,22 @@ const MainFooter = () => {
         <div className="w-full sm:w-1/2 md:w-1/4">
           <h5 className="font-bold mb-3">Follow us</h5>
           <div className="flex justify-start space-x-4">
-            <FontAwesomeIcon icon={faTwitter} className="text-xl" />
-            <FontAwesomeIcon icon={faInstagram} className="text-xl" />
-            <FontAwesomeIcon icon={faPinterest} className="text-xl" />
-            <FontAwesomeIcon icon={faYoutube} className="text-xl" />
+            <a href="https://www.facebook.com/scottybleds/" target="_blank" rel="noopener noreferrer" className="text-xl">
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a href="https://www.instagram.com/scottybsleds/" target="_blank" rel="noopener noreferrer" className="text-xl">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            {/* Uncomment and replace with your Pinterest profile link if needed
+              <a href="https://pinterest.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-xl">
+              <FontAwesomeIcon icon={faPinterest} />
+              </a>
+             */}
+            <a href="https://www.youtube.com/watch?v=Sh6Zl7Uzm24" target="_blank" rel="noopener noreferrer" className="text-xl">
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
           </div>
+
         </div>
       </div>
 

@@ -9,7 +9,7 @@ function Contact() {
       <div className="min-h-screen flex flex-col justify-center items-center px-4">
       <div className="bg-black bg-opacity-50 p-6 rounded-lg max-w-2xl w-full mb-10">
         <h2 className="text-3xl text-white font-semibold text-center mb-4">Contact Us</h2>
-        <p className="mb-8 text-gray-300 text-center">We use an agile approach to test assumptions and connect with the needs of your audience early and often.</p>
+        <p className="mb-8 text-gray-300 text-center">We are working on the ability to add reviews and customer support to our site. If you have a questions or a comment please use this form not our free quote form. Also, feel free to viste our socials and leave comments there.</p>
         
         <form className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <input className="bg-gray-600 bg-opacity-50 rounded p-4" placeholder="First Name" />

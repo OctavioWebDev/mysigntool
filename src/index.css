@@ -16,7 +16,12 @@ code {
     monospace;
 }
 
-/* In your global CSS file */
+@layer base {
+  body {
+    @apply bg-body-bg bg-gradient-radial;
+  }
+}
+
 @keyframes rgbGlow {
   0% { text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 20px #FF0077; }
   33% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF77; }
