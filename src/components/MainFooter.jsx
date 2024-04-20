@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faFacebookF,
@@ -19,6 +20,7 @@ import SBLEDSLogo from '../assets/Logos/SBLEDSLogo.svg';
 const MainFooter = () => {
   return (
     <footer className="flex flex-col w-full shrink-0 items-center px-4 md:px-6">
+      
       <div className="flex flex-wrap justify-between w-full items-start gap-2 sm:gap-6 py-6 border-b border-gray-400">
         <div>
           <img className="h-10 w-10" src={SBLEDSLogo} alt="SB LEDS Logo" />
@@ -37,29 +39,68 @@ const MainFooter = () => {
                 </Marker>
             </MapContainer>
       </div>
-        <div className="flex flex-wrap gap-x-12 gap-y-9 mt-6">
-          {/* <div className="w-full sm:w-1/2 md:w-1/4">
-            <h5 className="font-bold mb-3">Account</h5>
-            <p>Orders</p>
-            <p>Track your order</p>
-          </div> */}
+      <div className="flex flex-wrap gap-x-12 gap-y-9 mt-6">
           <div className="w-full sm:w-1/2 md:w-1/4">
-            <h5 className=" text-slate-800 py-3 font-bold mb-3">Professional</h5>
-            {/* <p>B2B</p> */}
-            {/* <p>Whole Sale</p> */}
-            <p className=" text-gray-800"><a href="http://localhost:3000/custom-logo" className="hover:underline">Custom Business Logo</a></p>
-            <p className=" text-gray-800"><a href="http://localhost:3000/custom-logo" className="hover:underline">Digital Sign</a></p>
-            {/* <h5 className="font-bold mt-5">Gift Card</h5> */}
+            <h5 className="text-slate-800 py-3 font-bold mb-3">Professional</h5>
+            <p className="text-gray-800">
+              <NavLink 
+            to="/custom-logo" 
+            className="hover:underline">
+              Custom Business Logo
+              </NavLink>
+              </p>
+            <p className="text-gray-800">
+              <NavLink 
+              to="/custom-logo" 
+              className="hover:underline">
+                Digital Sign
+                </NavLink>
+                </p>
           </div>
           <div className="w-full sm:w-1/2 md:w-1/4">
-            <h5 className="font-bold py-3 text-slate-800 mb-3">Help</h5>
-            {/* <p><a href="http://localhost:3000/faq" class="hover:underline">FAQ</a></p> */}
-            <p className=" text-gray-800"><a href="http://localhost:3000/shipping" className="hover:underline">Shipping Policy</a></p>
-            <p className=" text-gray-800"><a href="http://localhost:3000/returns" className="hover:underline">Return Policy</a></p>
-            <p className=" text-gray-800"><a href="http://localhost:3000/contact" className="hover:underline">Contact</a></p>
-            <p className=" text-gray-800"><a href="http://localhost:3000/refund" className="hover:underline">Refund Policy</a></p>
-            <p className=" text-gray-800"><a href="http://localhost:3000/privacy" className="hover:underline">Privacy Policy</a></p>
-            <p className=" text-gray-800"><a href="http://localhost:3000/terms" className="hover:underline">Terms & Conditions</a></p>
+            <h5 className="font-bold py-3 text-slate-800 mb-3">
+              Help
+              </h5>
+            <p className="text-gray-800">
+              <NavLink 
+            to="/shipping" 
+            className="hover:underline">
+              Shipping Policy
+              </NavLink>
+              </p>
+            <p className="text-gray-800">
+              <NavLink 
+            to="/returns" 
+            className="hover:underline">
+              Return Policy
+              </NavLink>
+              </p>
+            <p className="text-gray-800">
+              <NavLink 
+            to="/contact" 
+            className="hover:underline">
+              Contact
+              </NavLink>
+              </p>
+            <p className="text-gray-800">
+              <NavLink 
+            to="/refund" 
+            className="hover:underline">
+              Refund Policy
+              </NavLink>
+              </p>
+            <p className="text-gray-800">
+              <NavLink 
+            to="/privacy" 
+            className="hover:underline">
+              Privacy Policy</NavLink></p>
+            <p className="text-gray-800">
+              <NavLink 
+            to="/terms" 
+            className="hover:underline">
+              Terms & Conditions
+              </NavLink>
+              </p>
           </div>
         </div>
         {/* Follow Us */}
