@@ -24,43 +24,19 @@ const PhotoCarousel = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
   return (
     <div id="controls-carousel" className="relative w-full" data-carousel="static">
       <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-linear ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute -z-50 inset-0 w-full h-full transition-opacity duration-1000 ease-linear ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'}`}
             data-carousel-item
           >
             <img src={image} className="w-full h-full object-cover object-center" alt={`Slide ${index + 1}`} />
           </div>
         ))}
       </div>
-
-      <button
-        type="button"
-        className="absolute top-0 start-0 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-prev
-        onClick={prevSlide}
-      >
-      </button>
-
-      <button
-        type="button"
-        className="absolute top-0 end-0 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next
-        onClick={nextSlide}
-      >
-      </button>
     </div>
   );
 };
