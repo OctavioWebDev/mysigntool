@@ -32,3 +32,10 @@ code {
 .rgb-glow {
   animation: rgbGlow 3s infinite alternate;
 }
+
+.leaflet-container {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  z-index: -1;
+}

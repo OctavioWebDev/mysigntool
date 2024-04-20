@@ -52,7 +52,6 @@ const CustomBusinessLogoForm = () => {
     });
   };
 
-
   return (
     <div className="mt-16 container mx-auto px-4">
       <Header />

@@ -20,7 +20,7 @@ const IconLinkWithTooltip = ({ to, icon, label }) => {
             onMouseLeave={() => setIsHovered(false)}
             className="hover:underline underline-offset-4"
       >
-        <FontAwesomeIcon icon={icon} size="xl" className='fill-current text-purple-600 hover:text-purple-700'/>
+        <FontAwesomeIcon icon={icon} size="sm" className='fill-current text-purple-600 hover:text-purple-700'/>
         {isHovered && (
           <div className="absolute -left-10 ml-2 p-2 text-sm text-white bg-purple-500 opacity-70 rounded">
             {label}

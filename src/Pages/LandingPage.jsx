@@ -29,11 +29,11 @@ const LandingPage = () => {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-blue-700">
-                    Welcome Scotty B's LEDs, where your brightest ideas shine in LED!
+                    Welcome to Scotty B's LEDs, where your brightest ideas shine in LED!
                   </h1>
                   <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                     At Scotty B's LEDs, we're passionate about lighting up your world with custom,
-                    high-quality LED signs. With over two decades of expertise in the field,
+                    high-quality LED signs. With a decade of expertise in the field,
                     our commitment is to turn your vision into a luminous reality. Perfect for
                     businesses, special events, or personal home decor, our LED signs are crafted
                     to add a unique glow to any space.
@@ -256,28 +256,7 @@ const LandingPage = () => {
               </p>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-2">
-              <form className="flex space-x-2">
-                <input
-                  className="max-w-lg flex-1 
-                      rounded-md border border-gray-200 bg-white 
-                      px-8 text-sm font-medium shadow-sm transition-colors focus:border-gray-300 
-                      focus:ring focus:ring-gray-200 focus:ring-opacity-50"
-                  placeholder="Enter your email"
-                  type="email"
-                />
-                <button
-                  type="submit"
-                  className="inline-flex h-10 
-                      items-center justify-center 
-                      rounded-md bg-gray-900 px-8 
-                      text-sm font-medium text-gray-50 
-                      shadow transition-colors hover:bg-gray-900/90 
-                      focus-visible:outline-none 
-                      focus-visible:ring-1 focus-visible:ring-gray-950 
-                      disabled:pointer-events-none disabled:opacity-50"
-                >Sign Up</button>
-              </form>
-              <p className="text-xs text-gray-500 dark:text-gray-400">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
                 Ready to Light Up Your Idea?
                 <Link className="underline underline-offset-2" to="/terms" href="http://localhost:3000/terms">
                   Terms & Conditions
