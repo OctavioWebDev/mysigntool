@@ -68,6 +68,7 @@ function Contact() {
         <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <input
               type="text"
+              id="firstName"
               name="firstName"
               value={formState.firstName}
               onChange={handleChange}
