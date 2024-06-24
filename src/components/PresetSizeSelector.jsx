@@ -18,14 +18,14 @@ const PresetSizeSelector = ({ onSelectSize, onResetCustomSize }) => {
 
     return (
         <div className="mt-6 ml-2 mx-2.5">
-             <label htmlFor={inputId} className="block text-white font-medium text-lg mb-2">
+             <label htmlFor={inputId} className="block text-white font-medium text-lg mb-4">
                 Select Size
             </label>
-        <div className="flex max-w-lg overflow-x-auto whitespace-wrap">
+        <div className="flex max-w-3xl">
             {sizes.map((size, index) => (
                 <button
                     key={index}
-                    className={`px-6 py-4 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                    className={`w-80 px-5 py-2 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
                         selectedSize === size.dimensions ? 'bg-purple-700 border-purple-700 text-white' : 'bg-transparent text-white hover:bg-purple-600'
                     }`}
                     onClick={() => handleSizeSelection(size.dimensions)}

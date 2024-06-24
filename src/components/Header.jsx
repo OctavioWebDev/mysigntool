@@ -5,7 +5,10 @@ import {
   faCircleInfo,
   faAt,
   faHouse,
-  faRectangleList
+  faRectangleList,
+  faCartShopping,
+  faUser,
+  faPenToSquare
 } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as SBLEDSLogo } from '../assets/Logos/SBLEDSLogo.svg';
 
@@ -45,8 +48,11 @@ const Header = () => {
       <nav className="flex gap-4 sm:gap-8">
         <IconLinkWithTooltip to="/" icon={faHouse} label="Home" />
         <IconLinkWithTooltip to="/aboutus" icon={faCircleInfo} label="About Us" />
-        <IconLinkWithTooltip to="/custom-logo" icon={faRectangleList} label="Custom Order" />
+        <IconLinkWithTooltip to="/custom-logo" icon={faRectangleList} label="Custom Logo" />
+        <IconLinkWithTooltip to="/express-yourself" icon={faPenToSquare} label="Express-YourSelf" />
         <IconLinkWithTooltip to="/contact" icon={faAt} label="Contact" />
+        <IconLinkWithTooltip to="/profile" icon={faUser} label="Account" />
+        <IconLinkWithTooltip to="/cart" icon={faCartShopping} label="Cart" />
         {/* Add more IconLinkWithTooltip for other icons as needed */}
       </nav>
     </header>

@@ -21,12 +21,12 @@ const CustomSizeSelector = ({ onSizeChange }) => {
     };
 
     return (
-        <div className="customSizeSelector">
-            <div className="customSizeSelectorBox ">
+        <div className="p-3 max-w-3xl overflow-x-auto whitespace-nowrap">
+            <div className="mt-6">
             <label 
                 for="medium-range" 
                 class="block
-                mb-2 
+                mb-4 
                 text-lg 
                 font-medium
                  text-gray-900
@@ -42,7 +42,7 @@ const CustomSizeSelector = ({ onSizeChange }) => {
                     onChange={(e) => handleSizeChange(parseInt(e.target.value))} 
                     class="w-full
                     h-2 
-                    mb-3
+                    mb-4
                      bg-gray-200 
                      rounded-lg 
                      appearance-none 

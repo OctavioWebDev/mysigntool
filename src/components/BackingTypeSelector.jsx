@@ -20,10 +20,10 @@ const BackingTypeSelector = ({ onSelectBackingType }) => {
 
     return (
         <div className="mt-6 ml-2 mx-2.5">
-            <label htmlFor={inputId} className="block text-white font-medium text-lg mb-2">
+            <label htmlFor={inputId} className="block text-white font-medium text-lg mb-4">
                 Backing Type
             </label>
-        <div className="grid grid-cols-2 gap-2 max-w-lg p-2">
+        <div className="grid grid-cols-2 gap-2 max-w-3xl p-2">
             {backingTypes.map((type, index) => (
                 <button
                     key={index}

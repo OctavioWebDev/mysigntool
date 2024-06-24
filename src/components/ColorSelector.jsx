@@ -30,11 +30,11 @@ const ColorSelector = ({ onSelectColor }) => {
     };
 
     return (
-        <div className="mt-6 ml-2 mx-2.5">
-        <label htmlFor={inputId} className="block text-white text-lg mb-2">
+        <div className="mt-6 ml-2 mx-2.5 max-w-3xl">
+        <label htmlFor={inputId} className="block text-white text-lg mb-4">
                 Your Color
             </label>
-        <div className="flex max-w-lg overflow-x-auto whitespace-nowrap">
+        <div className="flex overflow-x-auto whitespace-nowrap">
             {colors.map((color, index) => (
                 <div
                     key={index}

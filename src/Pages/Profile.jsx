@@ -1,78 +1,114 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import MainFooter from '../components/MainFooter';
+import  Avatar from "../components/ui/Avatar"
+import AvatarFallback from "../components/ui/AvatarFallback"
+import AvatarImage from "../components/ui/AvatarImage"
+import  Button  from "../components/ui/Button"
+import  Card  from "../components/ui/Card"
+import CardContent from "../components/ui/CardContent"
+import CardHeader from "../components/ui/CardHeader"
+import  Label  from "../components/ui/Label"
+import  Input  from "../components/ui/Input"
+import  Textarea  from "../components/ui/Textarea"
+import Header from "../components/Header"
+import MainFooter from "../components/MainFooter"
 
-// Define fetchUserProfile function
-const fetchUserProfile = async (token) => {
-  const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/users/profile`, { // Removed the trailing slash from the environment variable
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`,
-    },
-  });
-  console.log(`${process.env.REACT_APP_BACKEND_URL}api/users/profile`);
-console.log(`Bearer ${token}`);
-
-
-  if (!response.ok) {
-    throw new Error('Could not fetch user profile.');
-  }
-
-  return await response.json();
-};
-
-
-const Profile = () => {
-  const [userProfile, setUserProfile] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-
-    fetchUserProfile(token)
-      .then(profile => {
-        setUserProfile(profile);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error(err);
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
-  // Adjustments for dynamic data display
+ function Profile() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <div className="flex flex-col items-center pt-12 pb-8">
-        <img
-          src={userProfile?.profilePicture || 'default-profile-picture-url'} // Use a default image if none is provided
-          alt="Profile"
-          className="w-32 h-32 rounded-full object-cover border-4 border-gray-700 drop-shadow-sm"
-        />
-        <h1 className="mt-4 text-xl font-semibold text-gray-800">
-          {userProfile?.username || 'User Profile'}
-        </h1>
-        <div className="shadow-2xl rounded-lg w-3/4 p-4">
-          <div className="mb-6">
-            <h2 className="text-lg font-semibold text-gray-800">User Info</h2>
-            <p className="text-gray-700">Username: {userProfile?.username}</p>
-            <p className="text-gray-700">Email: {userProfile?.email}</p>
+    <div className="container mx-auto px-4 md:px-6 py-8">
+      <Header/>
+      <div className="grid md:grid-cols-[280px_1fr] gap-8">
+        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 flex flex-col items-center">
+          <Avatar className="w-24 h-24 mb-4">
+            <AvatarImage src="/placeholder-user.jpg" />
+            <AvatarFallback>JD</AvatarFallback>
+          </Avatar>
+          <h2 className="text-xl font-semibold mb-2">John Doe</h2>
+          <p className="text-gray-500 dark:text-gray-400 mb-4">john@example.com</p>
+          <Button variant="outline" size="sm">
+            Edit Profile
+          </Button>
+        </div>
+        <div className="grid gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Recent Orders</h3>
+            <div className="grid gap-4">
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <div className="font-medium">#12345</div>
+                    <div className="text-gray-500 dark:text-gray-400">June 15, 2023</div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-[80px_1fr_80px] items-center gap-4">
+                    <img src="/placeholder.svg" width={80} height={80} alt="Product" className="rounded-md" />
+                    <div>
+                      <h4 className="font-medium">Acme Wireless Headphones</h4>
+                      <p className="text-gray-500 dark:text-gray-400">Black, Large</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-medium">$99.99</div>
+                      <div className="text-gray-500 dark:text-gray-400">Delivered</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <div className="font-medium">#12344</div>
+                    <div className="text-gray-500 dark:text-gray-400">May 20, 2023</div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-[80px_1fr_80px] items-center gap-4">
+                    <img src="/placeholder.svg" width={80} height={80} alt="Product" className="rounded-md" />
+                    <div>
+                      <h4 className="font-medium">Acme Fitness Tracker</h4>
+                      <p className="text-gray-500 dark:text-gray-400">Black, Small</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="font-medium">$49.99</div>
+                      <div className="text-gray-500 dark:text-gray-400">Delivered</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-
-          {/* The orders would be dynamically generated based on the userProfile data */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Personal Information</h3>
+            <Card>
+              <CardContent>
+                <form className="grid gap-4">
+                  <div className="grid gap-2">
+                    <Label htmlFor="name">Name</Label>
+                    <Input id="name" defaultValue="John Doe" />
+                  </div>
+                  <div className="grid gap-2">
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" type="email" defaultValue="john@example.com" />
+                  </div>
+                  <div className="grid gap-2">
+                    <Label htmlFor="password">Password</Label>
+                    <Input id="password" type="password" />
+                  </div>
+                  <div className="grid gap-2">
+                    <Label htmlFor="address">Address</Label>
+                    <Textarea id="address" rows={3} defaultValue="123 Main St, Anytown USA" />
+                  </div>
+                  <Button type="submit" className="justify-self-end">
+                    Save Changes
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+            <MainFooter/>
+          </div>
         </div>
       </div>
-      <MainFooter />
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile
 

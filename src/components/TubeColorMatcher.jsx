@@ -15,12 +15,12 @@ const TubeColorMatcher = ({ onSelectTubeColor, signColor }) => {
 
     return (
         <div className="mt-6 ml-2 mx-2.5">
-            <label htmlFor={inputId} className="block text-white text-lg mb-2">
+            <label htmlFor={inputId} className="block text-white text-lg mb-4">
                 Your Tube Color
             </label>
-        <div className="flex max-w-lg justify-center overflow-x-auto whitespace-wrap">
+        <div className="flex max-w-3xl justify-center overflow-x-auto whitespace-wrap">
             <button
-                className={`px-6 py-3 mx-2 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                className={`w-80 px-5 py-2 mx-2 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
                     selectedTubeColor === 'white' ? 'bg-purple-700 border-purple-700 text-white' : 'bg-transparent text-white hover:bg-purple-600'
                 } w-92`}
                 onClick={() => handleSelectTubeColor('white')}
@@ -28,7 +28,7 @@ const TubeColorMatcher = ({ onSelectTubeColor, signColor }) => {
                 White Tube
             </button>
             <button
-                className={`px-6 py-3 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
+                className={`w-80 px-5 py-2 mx-4 text-center border border-white rounded cursor-pointer transition duration-300 ease-in-out ${
                     selectedTubeColor === signColor ? 'bg-purple-700 border-purple-700 text-white' : 'bg-transparent text-white hover:bg-purple-600'
                 } w-92`}
                 onClick={() => handleSelectTubeColor('colorMatching')}

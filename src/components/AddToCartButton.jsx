@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const AddToCartButton = ({ addToCart, selections }) => {
+    const navigate = useNavigate(); // Initialize useNavigate
+
     const handleAddToCart = () => {
         addToCart(selections);
+        navigate('/cart'); // Navigate to the cart route
     }
 
     return (
@@ -23,3 +27,5 @@ AddToCartButton.propTypes = {
 };
 
 export default AddToCartButton;
+
+

@@ -12,9 +12,9 @@ const FontSelector = ({ fonts, onSelectFont }) => {
     };
 
     return (
-        <div className="flex max-w-lg overflow-x-auto whitespace-wrap">
-            <div className="mt-6 ml-2 mx-2.5">
-            <label htmlFor={inputId} className="block text-white text-lg mb-2">
+        <div className="flex max-w-3xl mt-6 overflow-x-auto whitespace-wrap">
+            <div className="ml-2 mx-2.5">
+            <label htmlFor={inputId} className="block text-white text-lg mb-4">
                 Your Font
             </label>
             <div className="flex flex-row">
