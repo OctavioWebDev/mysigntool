@@ -13,7 +13,7 @@ import Header from '../components/Header';
 
 function LEDSignBuilderTool({ addToCart }) {
   const [textInput, setTextInput] = useState('');
-  const [selectedFont, setSelectedFont] = useState('Arial');
+  const [selectedFont, setSelectedFont] = useState('roboto');
   const [selectedColor, setSelectedColor] = useState('#2196f3'); // Default color
   const [size, setSize] = useState({ width: 0, height: 0 });
   const [tubeColor, setTubeColor] = useState('');
@@ -22,10 +22,9 @@ function LEDSignBuilderTool({ addToCart }) {
   const [customSize, setCustomSize] = useState({ width: 0, height: 0 });
 
   const handleTextInputChange = (text) => setTextInput(text);
-  const fonts = ["Arial", "Verdana", "Helvetica", "Times New Roman", "Courier New", /* more fonts */];
 
-  const handleFontSelection = (font) => {
-    setSelectedFont(font);
+  const handleFontSelection = (fontClassName) => {
+    setSelectedFont(fontClassName);
   };
 
   const colors = ["#FFD700", "#ADD8E6", "#FF69B4", "#8F00FF", "#FFA500", "#FFC0CB", "#FF0000", "#FFFFFF", "#0D98BA", "#00008B", "#FAFA33", "#FFFDD0" /* more colors */];
@@ -77,7 +76,7 @@ function LEDSignBuilderTool({ addToCart }) {
         <div className="lg:w-1/2 p-4 overflow-y-auto">
           <div className="mt-20 mb-20 space-y-4">
             <TextInput placeholder="What say you!" onTextChange={handleTextInputChange} />
-            <FontSelector onSelectFont={handleFontSelection} fonts={fonts} />
+            <FontSelector onSelectFont={handleFontSelection} />
             <ColorSelector colors={colors} onSelectColor={handleColorSelect} />
             <TubeColorSelector onSelectTubeColor={handleTubeColorSelect} signColor={selectedColor} />
             <PresetSizeSelector onSelectSize={handlePresetSizeSelect} onResetCustomSize={handleResetCustomSize} />
@@ -103,7 +102,3 @@ function LEDSignBuilderTool({ addToCart }) {
 }
 
 export default LEDSignBuilderTool;
-
-
-
-
