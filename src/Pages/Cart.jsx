@@ -10,7 +10,7 @@ const Cart = ({ cart, removeFromCart }) => { // Receive cart and removeFromCart 
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="max-w-2xl mx-auto p-5">
+      <div className="max-w-2xl mt-20 text-fuchsia-950 mx-auto p-5">
         {cart.length === 0 ? (
           <p className="mt-24 text-sm text-gray-300">Your cart is empty.</p>
         ) : (

@@ -8,16 +8,21 @@ const fontAliases = [
   { alias: 'Yellowtail', className: 'yellowtail' },
   { alias: 'Tangerine', className: 'tangerine' },
   { alias: 'Cookie', className: 'cookie' },
-  { alias: 'Parisienne', className: 'parisienne' }
+  { alias: 'Parisienne', className: 'parisienne' },
+  { alias: 'Monoton', className: 'monoton' },
+  { alias: 'Righteous', className: 'righteous' },
+  { alias: 'Lobster', className: 'lobster' },
+  { alias: 'Playball', className: 'playball' },
+  { alias: 'Ranchers', className: 'ranchers' },
 ];
 
 const FontSelector = ({ onSelectFont }) => {
-    const [selectedFont, setSelectedFont] = useState('');
+    const [selectedFont, setSelectedFont] = useState(''); // Initial state set to an empty string
 
-    const handleSelectFont = (fontAlias) => {
-        setSelectedFont(fontAlias);
+    const handleSelectFont = (font) => {
+        setSelectedFont(font.className); // Correctly set the selected font class name
         if (onSelectFont) {
-            onSelectFont(fontAlias.className);
+            onSelectFont(font.className); // Pass the class name to the parent component
         }
     };
 
@@ -47,5 +52,3 @@ const FontSelector = ({ onSelectFont }) => {
 };
 
 export default FontSelector;
-
-
