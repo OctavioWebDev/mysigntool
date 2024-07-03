@@ -1,4 +1,4 @@
-import React, {useState} from 'react'; //add useState when needed for the cart and other components
+import React, { useState } from 'react'; // Add useState when needed for the cart and other components
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Removed Switch
 import './index.css';
@@ -21,7 +21,8 @@ import PrivacyPolicy from './Pages/PrivacyPolicy';
 import Contact from './Pages/Contact';
 import Shippingpolicy from './Pages/ShippingPolicy';
 import AboutUs from './Pages/AboutUs';
-
+import CheckoutPage from './Pages/CheckoutPage'; // Import CheckoutPage
+import { GlobalProvider } from './Context/GlobalState'; // Adjust the path as needed
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -55,6 +56,7 @@ const App = () => {
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shipping" element={<Shippingpolicy />} />
+        <Route path="/checkout" element={<CheckoutPage />} /> {/* Add this line for the CheckoutPage */}
       </Routes>
     </Router>
   );
@@ -63,9 +65,10 @@ const App = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <GlobalProvider>
+      <App />
+    </GlobalProvider>
   </React.StrictMode>
 );
 
 reportWebVitals();
-

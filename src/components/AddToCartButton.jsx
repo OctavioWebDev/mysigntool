@@ -27,5 +27,3 @@ AddToCartButton.propTypes = {
 };
 
 export default AddToCartButton;
-
-

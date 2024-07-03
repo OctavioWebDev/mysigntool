@@ -24,7 +24,7 @@ const ColorSelector = ({ onSelectColor }) => {
 
     const handleSelectColor = (color) => {
         setSelectedColor(color);
-        onSelectColor(color);
+        onSelectColor(colorMap[color] || color);
     };
 
     return (
@@ -57,8 +57,3 @@ const ColorSelector = ({ onSelectColor }) => {
 };
 
 export default ColorSelector;
-
-
-
-
-
