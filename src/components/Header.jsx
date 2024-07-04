@@ -1,39 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCircleInfo,
-  faAt,
   faHouse,
-  faRectangleList,
   faCartShopping,
   faUser,
-  faPenToSquare
 } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as SBLEDSLogo } from '../assets/Logos/SBLEDSLogo.svg';
+import HamburgerMenu from './ui/HamburgerMenu';
+import TextLink from './ui/TextLink';
 
 // Tooltip component for icon links
-const IconLinkWithTooltip = ({ to, icon, label }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <div className="relative">
-      <Link to={to}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="hover:underline underline-offset-4"
-      >
-        <FontAwesomeIcon icon={icon} size="sm" className='fill-current text-purple-600 hover:text-purple-700'/>
-        {isHovered && (
-          <div className="absolute -left-10 ml-2 p-2 text-sm text-white bg-purple-500 opacity-70 rounded">
-            {label}
-          </div>
-        )}
-      </Link>
-      <span className="sr-only">{label}</span>
-    </div>
-  );
-};
+const IconLink = ({ to, icon, label }) => (
+  <Link to={to} className="hover:underline underline-offset-4 text-purple-600 hover:text-purple-700">
+    <FontAwesomeIcon icon={icon} size="sm" className="fill-current" />
+    <span className="ml-2">{label}</span>
+  </Link>
+);
 
 // Main Header component
 const Header = () => {
@@ -45,21 +28,20 @@ const Header = () => {
           Scotty B's LED's
         </span>
       </Link>
-      <nav className="flex gap-4 sm:gap-8">
-        <IconLinkWithTooltip to="/" icon={faHouse} label="Home" />
-        <IconLinkWithTooltip to="/aboutus" icon={faCircleInfo} label="About Us" />
-        <IconLinkWithTooltip to="/custom-logo" icon={faRectangleList} label="Custom Logo" />
-        <IconLinkWithTooltip to="/express-yourself" icon={faPenToSquare} label="Express-YourSelf" />
-        <IconLinkWithTooltip to="/contact" icon={faAt} label="Contact" />
-        <IconLinkWithTooltip to="/profile" icon={faUser} label="Account" />
-        <IconLinkWithTooltip to="/cart" icon={faCartShopping} label="Cart" />
-        {/* Add more IconLinkWithTooltip for other icons as needed */}
+      <nav className="hidden md:flex gap-4 sm:gap-8">
+        <IconLink to="/" icon={faHouse}  />
+        <TextLink to="/aboutus" label="About Us" />
+        <TextLink to="/custom-logo" label="Custom Logo" />
+        <TextLink to="/express-yourself" label="Express-YourSelf" />
+        <TextLink to="/contact" label="Contact" />
+        <IconLink to="/profile" icon={faUser} />
+        <IconLink to="/cart" icon={faCartShopping} />
       </nav>
+      <div className="md:hidden">
+        <HamburgerMenu />
+      </div>
     </header>
   );
 };
 
 export default Header;
-
-
-
