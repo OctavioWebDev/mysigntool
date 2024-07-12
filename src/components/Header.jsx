@@ -21,7 +21,7 @@ const IconLink = ({ to, icon, label }) => (
 // Main Header component
 const Header = () => {
   return (
-    <header className="flex bg-slate-800 items-center justify-between px-4 fixed top-0 left-0 right-0 lg:px-6 h-14 ">
+    <header className="flex bg-slate-800 items-center justify-between px-4 fixed top-0 left-0 right-0 lg:px-6 h-14">
       <Link to="/" className="flex items-center">
         <SBLEDSLogo className="h-10 w-10" />
         <span className="ml-2 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
@@ -29,12 +29,12 @@ const Header = () => {
         </span>
       </Link>
       <nav className="hidden md:flex gap-4 sm:gap-8">
-        <IconLink to="/" icon={faHouse}  />
+        <IconLink to="/" icon={faHouse} />
         <TextLink to="/aboutus" label="About Us" />
         <TextLink to="/custom-logo" label="Custom Logo" />
         <TextLink to="/express-yourself" label="Express-YourSelf" />
         <TextLink to="/contact" label="Contact" />
-        <IconLink to="/profile" icon={faUser} />
+        <IconLink to="/register" icon={faUser} />
         <IconLink to="/cart" icon={faCartShopping} />
       </nav>
       <div className="md:hidden">

@@ -1,14 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes for prop type validation
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import MainFooter from '../components/MainFooter';
 
 const Cart = ({ cart, removeFromCart }) => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleCheckout = () => {
-    navigate('/checkout', { state: { cart } }); // Navigate to the checkout page and pass the cart items
+    navigate('/checkout', { state: { cart } });
   };
 
   return (
@@ -62,7 +62,6 @@ const Cart = ({ cart, removeFromCart }) => {
   );
 };
 
-// PropTypes validation
 Cart.propTypes = {
   cart: PropTypes.array.isRequired,
   removeFromCart: PropTypes.func.isRequired,

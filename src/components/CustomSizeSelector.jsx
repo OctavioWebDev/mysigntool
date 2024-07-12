@@ -24,8 +24,8 @@ const CustomSizeSelector = ({ onSizeChange }) => {
         <div className="p-3 max-w-3xl overflow-x-auto whitespace-nowrap">
             <div className="mt-6">
             <label 
-                for="medium-range" 
-                class="block
+                htmlFor="medium-range" 
+                className="block
                 mb-4 
                 text-lg 
                 font-medium
@@ -40,7 +40,7 @@ const CustomSizeSelector = ({ onSizeChange }) => {
                     max="118"
                     value={size.width}
                     onChange={(e) => handleSizeChange(parseInt(e.target.value))} 
-                    class="w-full
+                    className="w-full
                     h-2 
                     mb-4
                      bg-gray-200 
